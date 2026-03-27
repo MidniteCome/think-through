@@ -11,9 +11,7 @@ Built on [Toulmin](https://en.wikipedia.org/wiki/Toulmin_method) argument struct
 [![Claude Code](https://img.shields.io/badge/Claude_Code-Skill-7c3aed?style=flat-square&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIj48cGF0aCBkPSJNMTIgMkM2LjQ4IDIgMiA2LjQ4IDIgMTJzNC40OCAxMCAxMCAxMCAxMC00LjQ4IDEwLTEwUzE3LjUyIDIgMTIgMnoiIGZpbGw9IiNhNzhiZmEiLz48L3N2Zz4=)](https://docs.anthropic.com/en/docs/claude-code)
 [![License: MIT](https://img.shields.io/badge/License-MIT-2ec4b6?style=flat-square)](LICENSE)
 
-<br/>
-
-[Install](#install) · [Usage](#usage) · [How It Works](#how-it-works) · [Web Version](#lucidly----the-full-experience)
+**English** | [中文](#中文)
 
 </div>
 
@@ -153,7 +151,7 @@ The skill watches for common reasoning traps and flags them in real-time:
 
 ---
 
-## Lucidly (洞悟) — The Full Experience
+## Lucidly — The Full Experience
 
 `/think-through` is the CLI distillation of **[Lucidly](https://lucidly-tau.vercel.app)**, a full-featured critical thinking web app with features that go beyond text:
 
@@ -200,7 +198,7 @@ Canvas-rendered images of your Thinking Type and insights. Download and share yo
 
 ### [Try Lucidly →](https://lucidly-tau.vercel.app)
 
-<sub>Built with Next.js + Supabase + Claude API. Dark theme. Bilingual (EN/中文).</sub>
+<sub>Built with Next.js + Supabase + Claude API. Dark theme. Bilingual (EN/CN).</sub>
 
 </div>
 
@@ -225,5 +223,241 @@ MIT
 ---
 
 <div align="center">
-<sub>Built by <a href="https://github.com/MidniteCome">William Choi</a> as part of the <a href="https://lucidly-tau.vercel.app">Lucidly (洞悟)</a> project.</sub>
+<sub>Built by <a href="https://github.com/MidniteCome">William Choi</a> as part of the <a href="https://lucidly-tau.vercel.app">Lucidly</a> project.</sub>
+</div>
+
+<br/>
+<br/>
+<br/>
+
+---
+
+<div align="center">
+
+<a id="中文"></a>
+
+# `/think-through`
+
+### Claude Code 批判性思维引擎
+
+**5 阶段推理状态机**，把模糊的直觉变成结构化的论证。
+
+基于 [Toulmin](https://zh.wikipedia.org/wiki/%E5%9B%BE%E5%B0%94%E6%98%8E%E6%A8%A1%E5%9E%8B) 论证结构、[Paul-Elder](https://www.criticalthinking.org/pages/our-concept-and-approach/19) 批判性思维要素，以及知性标准作为质量门控。
+
+[![Claude Code](https://img.shields.io/badge/Claude_Code-Skill-7c3aed?style=flat-square&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIj48cGF0aCBkPSJNMTIgMkM2LjQ4IDIgMiA2LjQ4IDIgMTJzNC40OCAxMCAxMCAxMCAxMC00LjQ4IDEwLTEwUzE3LjUyIDIgMTIgMnoiIGZpbGw9IiNhNzhiZmEiLz48L3N2Zz4=)](https://docs.anthropic.com/en/docs/claude-code)
+[![License: MIT](https://img.shields.io/badge/License-MIT-2ec4b6?style=flat-square)](LICENSE)
+
+[English](#think-through) | **中文**
+
+</div>
+
+<br/>
+
+---
+
+## 为什么做这个
+
+> **"搞清楚该问什么问题，会比搞清楚答案本身更重要。"**
+>
+> — Sam Altman, OpenAI CEO ([CNBC, 2025 年 1 月](https://www.cnbc.com/2025/01/13/openai-ceo-top-ability-you-need-to-succeed-age-of-ai-ask-great-questions.html))
+
+我们正处在一个奇怪的时刻。AI 能写代码、写论文、通过律师资格考试——但人类最值钱的能力不是*回答*问题，而是*提出*正确的问题。
+
+世界经济论坛将**批判性思维和解决问题列为 2025 年最紧缺的第一技能** ([WEF 未来就业报告](https://www.weforum.org/publications/the-future-of-jobs-report-2025/))。Anthropic CEO Dario Amodei 说得直白：即使在高度自动化的行业里，**"总得有人掌舵——那就是人的位置"** ([The Adolescence of Technology](https://www.darioamodei.com/essay/the-adolescence-of-technology))。
+
+规律很清晰：
+
+| AI 擅长的 | AI 替代不了的 |
+|---|---|
+| 生成答案 | 知道该问什么问题 |
+| 总结证据 | 判断证据是否可信 |
+| 构造论点 | 发现自己的盲区 |
+| 优化方案 | 质疑你是否在解决正确的问题 |
+
+**AI 是人类判断力的放大器，不是替代品** ([Thinkist](https://www.thinkist.com/the-age-of-ai-demands-a-critical-thinking-renaissance/))。讽刺的是，磨练思维最好的方式，可能是让 AI 来*挑战*你的想法——而不是附和它。
+
+这就是 `/think-through` 做的事。
+
+---
+
+## 演示
+
+<div align="center">
+
+<img src="assets/demo.svg" alt="think-through 演示 — Claude Code 中的 5 阶段推理会话" width="700"/>
+
+<sub>完整的 5 阶段会话：从模糊的问题到结构化的 Toulmin 论证，附带偏见检测</sub>
+
+</div>
+
+---
+
+## 安装
+
+将 skill 文件复制到 Claude Code 的 skills 目录即可：
+
+```bash
+# 克隆仓库
+git clone https://github.com/MidniteCome/think-through.git
+
+# 复制到 Claude Code skills 目录
+cp -r think-through/SKILL.md ~/.claude/skills/think-through/SKILL.md
+
+# 或者使用软链接
+mkdir -p ~/.claude/skills/think-through
+ln -s "$(pwd)/think-through/SKILL.md" ~/.claude/skills/think-through/SKILL.md
+```
+
+就这样。重启 Claude Code，`/think-through` 即可使用。
+
+---
+
+## 使用方式
+
+### 独立模式 — 深度推理会话
+
+```
+/think-through 我该不该辞职去创业？
+```
+
+完整走完 5 个阶段，每阶段有交互式提问、偏见检测，最终输出 Toulmin 结构化总结。
+
+### 辅助模式 — 快速结构化思考
+
+```
+/think-through assist 这个数据库 schema 设计合理吗？
+```
+
+压缩到 2-3 轮对话。给出结论、置信度和关键风险，然后交还控制权继续工作。
+
+---
+
+## 工作原理
+
+### 5 阶段状态机
+
+<div align="center">
+<img src="assets/stages.svg" alt="5 阶段推理流水线" width="700"/>
+</div>
+
+<br/>
+
+| 阶段 | 目标 | 质量门控 | 核心技术 |
+|:---:|---|---|---|
+| **1. 锚定** | 把模糊的感觉变成具体可操作的问题 | 清晰度 | 费米分解（拆解过于宏大的问题） |
+| **2. 证据检验** | 收集、验证、挑战证据 | 准确度 + 广度 | 强制反面证据（反 WYSIATI） |
+| **3. 推理桥梁** | 说清*为什么*证据能支持结论 | 逻辑性 | Warrant 提取——大多数人跳过的隐形推理步骤 |
+| **4. 压力测试** | 找到结论*失败*的条件 | 公正性 + 深度 | 事前验尸（Kahneman）+ 置信度校准（Tetlock） |
+| **5. 总结** | 综合为结构化结论 | — | 完整 Toulmin 图 + 偏见报告 |
+
+每个阶段都有**通过条件**——质量门控不过，就不能进入下一阶段。
+
+### Toulmin 论证骨架
+
+每次推理会话都会构建一个 [Toulmin 论证](https://zh.wikipedia.org/wiki/%E5%9B%BE%E5%B0%94%E6%98%8E%E6%A8%A1%E5%9E%8B)——结构化论证的黄金标准：
+
+<div align="center">
+<img src="assets/toulmin.svg" alt="Toulmin 论证结构" width="650"/>
+</div>
+
+<br/>
+
+大多数人提供了**数据**（证据），然后直接跳到**主张**（结论），跳过了**保证**（Warrant）——也就是解释*为什么*证据能支持结论的推理过程。第 3 阶段（推理桥梁）就是专门来把这个隐形跳跃暴露出来的。
+
+### 三大理论框架
+
+```
+Toulmin     =  骨架   →  确保论证有结构
+Paul-Elder  =  罗盘   →  在 8 个维度上丰富思考
+知性标准     =  门控   →  每次阶段转换时的质量控制
+```
+
+这个 skill 不会对你说教理论框架。它在底层使用这些框架，针对*你的*实际内容生成**具体的、有实质的问题**。
+
+### 偏见检测
+
+skill 会实时监控常见的推理陷阱并标记出来：
+
+- **社会认同** — 没有具体例子就说"大家都这么说"
+- **确认偏误 / WYSIATI** — 所有证据都指向同一方向
+- **相关不等于因果** — 事后归因谬误
+- **光环效应** — 从证据到结论的逻辑跳跃
+- **乐观偏误** — 对结果过度自信
+- **样本量忽视** — 从 1-2 个例子就以偏概全
+
+---
+
+## Lucidly 洞悟 — 完整体验
+
+`/think-through` 是 **[Lucidly 洞悟](https://lucidly-tau.vercel.app)** 的命令行蒸馏版。网页版提供更多纯文字之外的功能：
+
+<table>
+<tr>
+<td width="50%">
+
+### 交互式推理画布
+基于 SVG 的气泡图，支持拖拽和缩放。看着你的论证一步步生长——前提、证据、保证、结论——按 Toulmin 角色和强度着色。
+
+### 偏见雷达图
+蛛网图可视化，呈现你在所有会话中被检测到的偏见分布。一眼看出你最容易掉进哪些认知陷阱。
+
+### 年度思维报告
+思维版 Spotify Wrapped。5 张可滑动卡片：
+- 你的思维类型（16 型分类）
+- 偏见雷达
+- 成长曲线（质量分数趋势）
+- 突破性会话
+- 下一个挑战（个性化任务）
+
+</td>
+<td width="50%">
+
+### 6 个训练模块
+- **苏格拉底对话** — 引导式追问
+- **魔鬼代言人** — 论点强化
+- **事前验尸** — 风险分析
+- **说服力扫描** — 检测修辞手法
+- **决策质量** — 多因子评估
+- **概率校准** — 预测训练
+
+### Paul-Elder 八角图
+8 个思维要素的放射状可视化，带关系边线。鼠标悬停即可看到目的如何连接假设、假设如何连接含义。
+
+### 可分享卡片
+Canvas 渲染的思维类型和洞察图片。下载并分享你的推理画像。
+
+</td>
+</tr>
+</table>
+
+<div align="center">
+
+### [试试 Lucidly 洞悟 →](https://lucidly-tau.vercel.app)
+
+<sub>技术栈：Next.js + Supabase + Claude API。深色主题。中英双语。</sub>
+
+</div>
+
+---
+
+## 设计哲学
+
+大多数"AI 思维工具"不过是套了层壳的加长 prompt。这个不一样。
+
+5 阶段状态机源自论证理论（Toulmin）、批判性思维教育学（Paul-Elder）和认知心理学（Kahneman 的事前验尸、Tetlock 的超级预测、Annie Duke 的决策质量）中的成熟框架。
+
+核心洞察：**AI 不应该附和你——它应该挑战你。** 每个阶段都设计成在你思维最薄弱的地方增加摩擦，只有通过质量门控才能前进。
+
+最终的成果不是更好的答案，是更好的*问题*。
+
+---
+
+## 许可证
+
+MIT
+
+---
+
+<div align="center">
+<sub>由 <a href="https://github.com/MidniteCome">William Choi</a> 构建，属于 <a href="https://lucidly-tau.vercel.app">Lucidly 洞悟</a> 项目。</sub>
 </div>
