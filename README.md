@@ -46,33 +46,42 @@ That's what `/think-through` does.
 
 ## Demo
 
+### Case 1: Standalone — Deep Question
+
+> *"AI is making deep expertise obsolete — is it still worth spending years mastering a single field?"*
+
 <div align="center">
+<img src="assets/demo-standalone.svg" alt="Standalone mode: 5-stage deep reasoning session" width="700"/>
 
-<img src="assets/demo.svg" alt="think-through demo — 5-stage reasoning session in Claude Code" width="700"/>
+<sub>Full 5-stage session: Anchoring > Evidence > Inference Bridge > Stress Test > Toulmin Summary</sub>
+</div>
 
-<sub>A full 5-stage session: from vague question to structured Toulmin argument with bias detection</sub>
+<br/>
 
+### Case 2: Assist — Mid-Coding Decision
+
+> While vibe-coding a dashboard, you hit an architecture fork: WebSocket vs SSE vs polling?
+
+<div align="center">
+<img src="assets/demo-assist.svg" alt="Assist mode: quick structured thinking during vibe coding" width="700"/>
+
+<sub>2-3 exchanges, structured verdict saved to .claude/ — Claude Code references it going forward</sub>
 </div>
 
 ---
 
 ## Install
 
-Copy the skill into your Claude Code skills directory:
-
 ```bash
 # Clone
 git clone https://github.com/MidniteCome/think-through.git
 
 # Copy to Claude Code skills
-cp -r think-through/SKILL.md ~/.claude/skills/think-through/SKILL.md
-
-# Or if you prefer a symlink
 mkdir -p ~/.claude/skills/think-through
-ln -s "$(pwd)/think-through/SKILL.md" ~/.claude/skills/think-through/SKILL.md
+cp -r think-through/SKILL.md ~/.claude/skills/think-through/SKILL.md
 ```
 
-That's it. Restart Claude Code and `/think-through` is ready.
+Restart Claude Code. `/think-through` is ready.
 
 ---
 
@@ -81,18 +90,18 @@ That's it. Restart Claude Code and `/think-through` is ready.
 ### Standalone Mode — Deep Reasoning Session
 
 ```
-/think-through Should I quit my job to start a startup?
+/think-through AI is making deep expertise obsolete — should I still go deep?
 ```
 
 Walks you through all 5 stages with interactive questions, bias detection, and a final Toulmin-structured summary.
 
-### Assist Mode — Quick Structured Thinking
+### Assist Mode — Vibe Coding Companion
 
 ```
-/think-through assist Is this the right database schema for our use case?
+/think-through assist Should we use WebSocket, SSE, or polling for this dashboard?
 ```
 
-Compressed into 2-3 exchanges. Gets you a verdict with confidence level and key risks, then returns control to your work.
+Compressed into 2-3 exchanges. Outputs a structured decision card saved to `.claude/think-through/`, which Claude Code uses as context for subsequent work. Returns control to your coding session immediately.
 
 ---
 
@@ -153,52 +162,39 @@ The skill watches for common reasoning traps and flags them in real-time:
 
 ## Lucidly — The Full Experience
 
-`/think-through` is the CLI distillation of **[Lucidly](https://lucidly-tau.vercel.app)**, a full-featured critical thinking web app with features that go beyond text:
+`/think-through` is the CLI distillation of **[Lucidly](https://lucidly-tau.vercel.app)**, a full-featured critical thinking web app. Here's what the web version adds:
 
-<table>
-<tr>
-<td width="50%">
+### Toulmin Argument Structure
 
-### Interactive Reasoning Canvas
-SVG-based bubble map with pan & zoom. Watch your argument grow as nodes connect — premises, evidence, warrants, conclusions — all color-coded by Toulmin role and strength.
+Every session produces a visual Toulmin diagram — Data, Warrant, Claim, Qualifier, Backing, Rebuttal — all color-coded and expandable.
 
-### Bias Radar Chart
-Spider-web visualization of your detected biases across all sessions. See which cognitive traps you fall into most.
+<div align="center">
+<img src="assets/lucidly-session.svg" alt="Lucidly session — Toulmin argument structure and reasoning dialog" width="700"/>
+</div>
 
-### Wrapped Annual Report
-Spotify Wrapped, but for your thinking. 5-card swipeable deck:
-- Your Thinking Type (16-type classification)
-- Bias Radar
-- Growth Curve (quality score over time)
-- Breakthrough Session
-- Next Quest (personalized challenge)
+<br/>
 
-</td>
-<td width="50%">
+### Thinking Profile + Bias Radar + Wrapped
 
-### 6 Training Exercises
-- **Socratic Flow** — Guided Socratic questioning
-- **Devil's Advocate** — Argument strengthening
-- **Pre-Mortem** — Risk analysis
-- **Persuasion Scan** — Detect rhetorical tactics
-- **Decision Quality** — Multi-factor evaluation
-- **Probability Calibration** — Prediction training
+Your reasoning sessions build a personal thinking profile over time: a 16-type classification, bias radar chart, quality score trend, and a Spotify Wrapped-style annual report.
 
-### Paul-Elder Octagon
-Radial visualization of 8 thinking elements with relationship edges. Interactive hover reveals how Purpose connects to Assumptions connects to Implications.
+<div align="center">
+<img src="assets/lucidly-profile.svg" alt="Lucidly profile — bias radar, quality trend, wrapped cards" width="700"/>
+</div>
 
-### Shareable Cards
-Canvas-rendered images of your Thinking Type and insights. Download and share your reasoning profile.
+<br/>
 
-</td>
-</tr>
-</table>
+### And More
+
+- **6 Training Exercises** — Socratic Flow, Devil's Advocate, Pre-Mortem, Persuasion Scan, Decision Quality, Probability Calibration
+- **Paul-Elder Octagon** — Radial visualization of 8 thinking elements with interactive relationship edges
+- **Shareable Cards** — Canvas-rendered images of your Thinking Type and insights
 
 <div align="center">
 
 ### [Try Lucidly →](https://lucidly-tau.vercel.app)
 
-<sub>Built with Next.js + Supabase + Claude API. Dark theme. Bilingual (EN/CN).</sub>
+<sub>Next.js + Supabase + Claude API. Bilingual (EN/CN).</sub>
 
 </div>
 
@@ -282,33 +278,42 @@ MIT
 
 ## 演示
 
+### 案例一：独立模式 — 深度问题
+
+> *"AI 正在让深度专业知识变得过时——还值得花几年精通一个领域吗？"*
+
 <div align="center">
+<img src="assets/demo-standalone.svg" alt="独立模式：5 阶段深度推理会话" width="700"/>
 
-<img src="assets/demo.svg" alt="think-through 演示 — Claude Code 中的 5 阶段推理会话" width="700"/>
+<sub>完整 5 阶段：锚定 > 证据检验 > 推理桥梁 > 压力测试 > Toulmin 总结</sub>
+</div>
 
-<sub>完整的 5 阶段会话：从模糊的问题到结构化的 Toulmin 论证，附带偏见检测</sub>
+<br/>
 
+### 案例二：辅助模式 — Vibe Coding 中触发
+
+> 你正在写一个实时 dashboard，遇到架构分岔：WebSocket、SSE 还是轮询？
+
+<div align="center">
+<img src="assets/demo-assist.svg" alt="辅助模式：vibe coding 中的快速结构化思考" width="700"/>
+
+<sub>2-3 轮对话，结构化决策保存到 .claude/，Claude Code 后续自动参考</sub>
 </div>
 
 ---
 
 ## 安装
 
-将 skill 文件复制到 Claude Code 的 skills 目录即可：
-
 ```bash
 # 克隆仓库
 git clone https://github.com/MidniteCome/think-through.git
 
 # 复制到 Claude Code skills 目录
-cp -r think-through/SKILL.md ~/.claude/skills/think-through/SKILL.md
-
-# 或者使用软链接
 mkdir -p ~/.claude/skills/think-through
-ln -s "$(pwd)/think-through/SKILL.md" ~/.claude/skills/think-through/SKILL.md
+cp -r think-through/SKILL.md ~/.claude/skills/think-through/SKILL.md
 ```
 
-就这样。重启 Claude Code，`/think-through` 即可使用。
+重启 Claude Code，`/think-through` 即可使用。
 
 ---
 
@@ -317,18 +322,18 @@ ln -s "$(pwd)/think-through/SKILL.md" ~/.claude/skills/think-through/SKILL.md
 ### 独立模式 — 深度推理会话
 
 ```
-/think-through 我该不该辞职去创业？
+/think-through AI 正在让深度专业知识变得过时——还值得花几年精通一个领域吗？
 ```
 
 完整走完 5 个阶段，每阶段有交互式提问、偏见检测，最终输出 Toulmin 结构化总结。
 
-### 辅助模式 — 快速结构化思考
+### 辅助模式 — Vibe Coding 伴侣
 
 ```
-/think-through assist 这个数据库 schema 设计合理吗？
+/think-through assist 这个 dashboard 该用 WebSocket、SSE 还是轮询？
 ```
 
-压缩到 2-3 轮对话。给出结论、置信度和关键风险，然后交还控制权继续工作。
+压缩到 2-3 轮对话。输出结构化决策卡片，保存到 `.claude/think-through/`，Claude Code 后续工作时自动引用。对话结束后立即交还控制权。
 
 ---
 
@@ -389,52 +394,39 @@ skill 会实时监控常见的推理陷阱并标记出来：
 
 ## Lucidly 洞悟 — 完整体验
 
-`/think-through` 是 **[Lucidly 洞悟](https://lucidly-tau.vercel.app)** 的命令行蒸馏版。网页版提供更多纯文字之外的功能：
+`/think-through` 是 **[Lucidly 洞悟](https://lucidly-tau.vercel.app)** 的命令行蒸馏版。网页版在此基础上增加了可视化和持久化：
 
-<table>
-<tr>
-<td width="50%">
+### Toulmin 论证结构图
 
-### 交互式推理画布
-基于 SVG 的气泡图，支持拖拽和缩放。看着你的论证一步步生长——前提、证据、保证、结论——按 Toulmin 角色和强度着色。
+每次推理会话生成可视化的 Toulmin 图——数据、保证、主张、限定、支撑、反驳——颜色编码，可展开。
 
-### 偏见雷达图
-蛛网图可视化，呈现你在所有会话中被检测到的偏见分布。一眼看出你最容易掉进哪些认知陷阱。
+<div align="center">
+<img src="assets/lucidly-session.svg" alt="Lucidly 会话 — Toulmin 论证结构和推理对话" width="700"/>
+</div>
 
-### 年度思维报告
-思维版 Spotify Wrapped。5 张可滑动卡片：
-- 你的思维类型（16 型分类）
-- 偏见雷达
-- 成长曲线（质量分数趋势）
-- 突破性会话
-- 下一个挑战（个性化任务）
+<br/>
 
-</td>
-<td width="50%">
+### 思维画像 + 偏见雷达 + 年度报告
 
-### 6 个训练模块
-- **苏格拉底对话** — 引导式追问
-- **魔鬼代言人** — 论点强化
-- **事前验尸** — 风险分析
-- **说服力扫描** — 检测修辞手法
-- **决策质量** — 多因子评估
-- **概率校准** — 预测训练
+推理会话随时间积累你的个人思维画像：16 型思维分类、偏见雷达图、质量分数趋势，以及 Spotify Wrapped 风格的年度思维报告。
 
-### Paul-Elder 八角图
-8 个思维要素的放射状可视化，带关系边线。鼠标悬停即可看到目的如何连接假设、假设如何连接含义。
+<div align="center">
+<img src="assets/lucidly-profile.svg" alt="Lucidly 画像 — 偏见雷达、质量趋势、Wrapped 卡片" width="700"/>
+</div>
 
-### 可分享卡片
-Canvas 渲染的思维类型和洞察图片。下载并分享你的推理画像。
+<br/>
 
-</td>
-</tr>
-</table>
+### 更多功能
+
+- **6 个训练模块** — 苏格拉底对话、魔鬼代言人、事前验尸、说服力扫描、决策质量、概率校准
+- **Paul-Elder 八角图** — 8 个思维要素的放射状可视化，带交互式关系边线
+- **可分享卡片** — Canvas 渲染的思维类型和洞察图片
 
 <div align="center">
 
 ### [试试 Lucidly 洞悟 →](https://lucidly-tau.vercel.app)
 
-<sub>技术栈：Next.js + Supabase + Claude API。深色主题。中英双语。</sub>
+<sub>技术栈：Next.js + Supabase + Claude API。中英双语。</sub>
 
 </div>
 
