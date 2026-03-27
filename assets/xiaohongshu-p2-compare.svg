@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1440" font-family="system-ui, -apple-system, 'PingFang SC', 'Noto Sans SC', sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#08090d"/>
+      <stop offset="50%" style="stop-color:#0e1018"/>
+      <stop offset="100%" style="stop-color:#0a0b10"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#2ec4b6"/>
+      <stop offset="100%" style="stop-color:#3dd6c8"/>
+    </linearGradient>
+    <filter id="blur1">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="80"/>
+    </filter>
+  </defs>
+
+  <rect width="1080" height="1440" fill="url(#bg)"/>
+
+  <!-- Ambient glow -->
+  <circle cx="540" cy="400" r="350" fill="#2ec4b6" opacity="0.03" filter="url(#blur1)"/>
+
+  <!-- Title -->
+  <text x="540" y="160" fill="#555568" font-size="18" text-anchor="middle" letter-spacing="3" font-weight="500">AI 时代的真相</text>
+  <text x="540" y="230" fill="#e8e8f0" font-size="42" font-weight="700" text-anchor="middle">AI 能做的 vs 你得自己来的</text>
+
+  <!-- Table header -->
+  <rect x="80" y="310" width="440" height="60" rx="10" fill="#12131a"/>
+  <rect x="560" y="310" width="440" height="60" rx="10" fill="url(#accent)" opacity="0.15"/>
+  <rect x="560" y="310" width="440" height="60" rx="10" fill="none" stroke="#2ec4b6" stroke-width="1" opacity="0.3"/>
+
+  <text x="300" y="348" fill="#8888a0" font-size="20" font-weight="600" text-anchor="middle">AI 擅长的</text>
+  <text x="780" y="348" fill="#2ec4b6" font-size="20" font-weight="600" text-anchor="middle">AI 替代不了的</text>
+
+  <!-- Row 1 -->
+  <rect x="80" y="395" width="440" height="100" rx="10" fill="#12131a" stroke="#1e1e2e" stroke-width="1"/>
+  <rect x="560" y="395" width="440" height="100" rx="10" fill="#12131a" stroke="#1e1e2e" stroke-width="1"/>
+  <text x="110" y="440" fill="#8888a0" font-size="28">🤖</text>
+  <text x="155" y="442" fill="#c0c0d0" font-size="22" font-weight="500">生成答案</text>
+  <text x="155" y="472" fill="#555568" font-size="15">你问什么它都能回答</text>
+  <text x="590" y="440" fill="#f0c040" font-size="28">🧠</text>
+  <text x="635" y="442" fill="#e8e8f0" font-size="22" font-weight="600">知道该问什么问题</text>
+  <text x="635" y="472" fill="#8888a0" font-size="15">好问题比好答案值钱 100 倍</text>
+
+  <!-- Row 2 -->
+  <rect x="80" y="520" width="440" height="100" rx="10" fill="#12131a" stroke="#1e1e2e" stroke-width="1"/>
+  <rect x="560" y="520" width="440" height="100" rx="10" fill="#12131a" stroke="#1e1e2e" stroke-width="1"/>
+  <text x="110" y="565" fill="#8888a0" font-size="28">🤖</text>
+  <text x="155" y="567" fill="#c0c0d0" font-size="22" font-weight="500">总结证据</text>
+  <text x="155" y="597" fill="#555568" font-size="15">一秒钟整理几十篇文章</text>
+  <text x="590" y="565" fill="#f0c040" font-size="28">🧠</text>
+  <text x="635" y="567" fill="#e8e8f0" font-size="22" font-weight="600">判断证据是否可信</text>
+  <text x="635" y="597" fill="#8888a0" font-size="15">数据来源、样本量、利益冲突</text>
+
+  <!-- Row 3 -->
+  <rect x="80" y="645" width="440" height="100" rx="10" fill="#12131a" stroke="#1e1e2e" stroke-width="1"/>
+  <rect x="560" y="645" width="440" height="100" rx="10" fill="#12131a" stroke="#1e1e2e" stroke-width="1"/>
+  <text x="110" y="690" fill="#8888a0" font-size="28">🤖</text>
+  <text x="155" y="692" fill="#c0c0d0" font-size="22" font-weight="500">构造论点</text>
+  <text x="155" y="722" fill="#555568" font-size="15">正反面都说得头头是道</text>
+  <text x="590" y="690" fill="#f0c040" font-size="28">🧠</text>
+  <text x="635" y="692" fill="#e8e8f0" font-size="22" font-weight="600">发现自己的盲区</text>
+  <text x="635" y="722" fill="#8888a0" font-size="15">你不知道你不知道的东西</text>
+
+  <!-- Row 4 -->
+  <rect x="80" y="770" width="440" height="100" rx="10" fill="#12131a" stroke="#1e1e2e" stroke-width="1"/>
+  <rect x="560" y="770" width="440" height="100" rx="10" fill="#12131a" stroke="#1e1e2e" stroke-width="1"/>
+  <text x="110" y="815" fill="#8888a0" font-size="28">🤖</text>
+  <text x="155" y="817" fill="#c0c0d0" font-size="22" font-weight="500">优化方案</text>
+  <text x="155" y="847" fill="#555568" font-size="15">给什么目标就往什么方向优化</text>
+  <text x="590" y="815" fill="#f0c040" font-size="28">🧠</text>
+  <text x="635" y="817" fill="#e8e8f0" font-size="22" font-weight="600">质疑目标本身是否正确</text>
+  <text x="635" y="847" fill="#8888a0" font-size="15">方向错了，跑得越快偏得越远</text>
+
+  <!-- Divider -->
+  <line x1="100" y1="940" x2="980" y2="940" stroke="#1e1e2e" stroke-width="1"/>
+
+  <!-- Bottom insight -->
+  <text x="540" y="1020" fill="#555568" font-size="18" text-anchor="middle" letter-spacing="3" font-weight="500">WEF 2025 未来就业报告</text>
+
+  <text x="540" y="1090" fill="#e8e8f0" font-size="36" font-weight="700" text-anchor="middle">批判性思维</text>
+  <text x="540" y="1140" fill="#8888a0" font-size="24" text-anchor="middle">连续两年被评为全球第一紧缺技能</text>
+
+  <!-- Visual accent: number -->
+  <text x="540" y="1300" fill="#2ec4b6" font-size="120" font-weight="800" text-anchor="middle" opacity="0.08" font-family="'SF Mono', monospace">#1</text>
+  <text x="540" y="1300" fill="#2ec4b6" font-size="72" font-weight="800" text-anchor="middle" opacity="0.25" font-family="'SF Mono', monospace">#1</text>
+
+  <!-- Bottom bar -->
+  <rect x="0" y="1380" width="1080" height="60" fill="#0c0d12"/>
+  <text x="540" y="1416" fill="#555568" font-size="14" text-anchor="middle" letter-spacing="1">来源：World Economic Forum Future of Jobs Report 2025</text>
+</svg>

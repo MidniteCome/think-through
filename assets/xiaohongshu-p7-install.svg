@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1440" font-family="system-ui, -apple-system, 'PingFang SC', 'Noto Sans SC', sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#08090d"/>
+      <stop offset="50%" style="stop-color:#0e1018"/>
+      <stop offset="100%" style="stop-color:#0a0b10"/>
+    </linearGradient>
+    <linearGradient id="teal" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#2ec4b6"/>
+      <stop offset="100%" style="stop-color:#3dd6c8"/>
+    </linearGradient>
+    <filter id="blur1">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="80"/>
+    </filter>
+  </defs>
+
+  <rect width="1080" height="1440" fill="url(#bg)"/>
+
+  <!-- Ambient glows -->
+  <circle cx="300" cy="500" r="300" fill="#2ec4b6" opacity="0.03" filter="url(#blur1)"/>
+  <circle cx="780" cy="1000" r="250" fill="#2ec4b6" opacity="0.025" filter="url(#blur1)"/>
+
+  <!-- Title -->
+  <text x="540" y="180" fill="#e8e8f0" font-size="44" font-weight="700" text-anchor="middle">开源免费，3 步装好</text>
+  <text x="540" y="230" fill="#8888a0" font-size="20" text-anchor="middle">Claude Code skill · MIT License</text>
+
+  <!-- Terminal window -->
+  <rect x="80" y="310" width="920" height="320" rx="12" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
+
+  <!-- Terminal chrome -->
+  <rect x="80" y="310" width="920" height="40" rx="12" fill="#21262d"/>
+  <rect x="80" y="338" width="920" height="12" fill="#21262d"/>
+  <circle cx="108" cy="330" r="6" fill="#ff5f57"/>
+  <circle cx="130" cy="330" r="6" fill="#febc2e"/>
+  <circle cx="152" cy="330" r="6" fill="#28c840"/>
+  <text x="540" y="334" fill="#8b949e" text-anchor="middle" font-size="13" font-family="'SF Mono', monospace">Terminal</text>
+
+  <!-- Command 1 -->
+  <text x="110" y="390" fill="#8b949e" font-size="13" font-family="'SF Mono', monospace"># 克隆仓库</text>
+  <text x="110" y="418" fill="#7ee787" font-size="16" font-family="'SF Mono', monospace" font-weight="bold">$</text>
+  <text x="135" y="418" fill="#e6edf3" font-size="16" font-family="'SF Mono', monospace">git clone https://github.com/MidniteCome/think-through.git</text>
+
+  <!-- Command 2 -->
+  <text x="110" y="462" fill="#8b949e" font-size="13" font-family="'SF Mono', monospace"># 复制到 Claude Code skills 目录</text>
+  <text x="110" y="490" fill="#7ee787" font-size="16" font-family="'SF Mono', monospace" font-weight="bold">$</text>
+  <text x="135" y="490" fill="#e6edf3" font-size="16" font-family="'SF Mono', monospace">mkdir -p ~/.claude/skills/think-through</text>
+  <text x="110" y="518" fill="#7ee787" font-size="16" font-family="'SF Mono', monospace" font-weight="bold">$</text>
+  <text x="135" y="518" fill="#e6edf3" font-size="16" font-family="'SF Mono', monospace">cp -r think-through/SKILL.md ~/.claude/skills/think-through/</text>
+
+  <!-- Command 3 -->
+  <text x="110" y="562" fill="#8b949e" font-size="13" font-family="'SF Mono', monospace"># 重启 Claude Code，输入：</text>
+  <text x="110" y="590" fill="#7ee787" font-size="16" font-family="'SF Mono', monospace" font-weight="bold">$</text>
+  <text x="135" y="590" fill="#f0c040" font-size="16" font-family="'SF Mono', monospace" font-weight="bold">/think-through</text>
+  <text x="335" y="590" fill="#e6edf3" font-size="16" font-family="'SF Mono', monospace">你的问题写在这里</text>
+
+  <!-- Divider -->
+  <line x1="100" y1="710" x2="980" y2="710" stroke="#1e1e2e" stroke-width="1"/>
+
+  <!-- Two modes recap -->
+  <text x="540" y="780" fill="#555568" font-size="18" text-anchor="middle" letter-spacing="3" font-weight="500">两种模式</text>
+
+  <!-- Mode 1 card -->
+  <rect x="80" y="820" width="440" height="200" rx="12" fill="#12131a" stroke="#1e1e2e" stroke-width="1"/>
+  <text x="120" y="870" fill="#2ec4b6" font-size="16" font-weight="700" letter-spacing="1">独立模式</text>
+  <text x="120" y="910" fill="#e8e8f0" font-size="20" font-weight="600">深度推理会话</text>
+  <text x="120" y="950" fill="#8888a0" font-size="15">完整 5 阶段</text>
+  <text x="120" y="975" fill="#8888a0" font-size="15">人生决策、创业方向、复杂问题</text>
+  <rect x="120" y="990" width="380" height="1" fill="#1e1e2e"/>
+
+  <!-- Mode 1 command -->
+  <text x="120" y="1005" fill="#555568" font-size="12" font-family="'SF Mono', monospace">/think-through 你的问题</text>
+
+  <!-- Mode 2 card -->
+  <rect x="560" y="820" width="440" height="200" rx="12" fill="#12131a" stroke="#2ec4b6" stroke-width="1" opacity="1"/>
+  <text x="600" y="870" fill="#f0c040" font-size="16" font-weight="700" letter-spacing="1">辅助模式</text>
+  <text x="600" y="910" fill="#e8e8f0" font-size="20" font-weight="600">Vibe Coding 伴侣</text>
+  <text x="600" y="950" fill="#8888a0" font-size="15">2-3 轮快速决策</text>
+  <text x="600" y="975" fill="#8888a0" font-size="15">架构选型、技术决策、方案对比</text>
+  <rect x="600" y="990" width="380" height="1" fill="#1e1e2e"/>
+
+  <!-- Mode 2 command -->
+  <text x="600" y="1005" fill="#555568" font-size="12" font-family="'SF Mono', monospace">/think-through assist 你的问题</text>
+
+  <!-- Divider -->
+  <line x1="100" y1="1090" x2="980" y2="1090" stroke="#1e1e2e" stroke-width="1"/>
+
+  <!-- Lucidly CTA -->
+  <text x="540" y="1160" fill="#555568" font-size="18" text-anchor="middle" letter-spacing="3" font-weight="500">想要可视化 + 思维画像？</text>
+
+  <rect x="280" y="1190" width="520" height="60" rx="30" fill="url(#teal)" opacity="0.12"/>
+  <rect x="280" y="1190" width="520" height="60" rx="30" fill="none" stroke="#2ec4b6" stroke-width="1.5"/>
+  <text x="540" y="1228" fill="#2ec4b6" font-size="22" font-weight="600" text-anchor="middle">试试 Lucidly 洞悟 网页版 →</text>
+
+  <text x="540" y="1290" fill="#555568" font-size="15" text-anchor="middle">lucidly-tau.vercel.app</text>
+
+  <!-- Bottom bar -->
+  <rect x="0" y="1380" width="1080" height="60" fill="#0c0d12"/>
+  <circle cx="100" cy="1410" r="4" fill="#2ec4b6" opacity="0.6"/>
+  <text x="540" y="1416" fill="#555568" font-size="14" text-anchor="middle" letter-spacing="1" font-family="'SF Mono', monospace">github.com/MidniteCome/think-through</text>
+</svg>

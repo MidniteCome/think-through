@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1440" font-family="system-ui, -apple-system, 'PingFang SC', 'Noto Sans SC', sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#08090d"/>
+      <stop offset="50%" style="stop-color:#0e1018"/>
+      <stop offset="100%" style="stop-color:#0a0b10"/>
+    </linearGradient>
+    <linearGradient id="teal" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#2ec4b6"/>
+      <stop offset="100%" style="stop-color:#3dd6c8"/>
+    </linearGradient>
+    <filter id="blur1">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="60"/>
+    </filter>
+  </defs>
+
+  <rect width="1080" height="1440" fill="url(#bg)"/>
+
+  <!-- Ambient glow -->
+  <circle cx="540" cy="720" r="400" fill="#2ec4b6" opacity="0.025" filter="url(#blur1)"/>
+
+  <!-- Title -->
+  <text x="540" y="120" fill="#555568" font-size="18" text-anchor="middle" letter-spacing="3" font-weight="500">不是套壳 PROMPT</text>
+  <text x="540" y="190" fill="#e8e8f0" font-size="40" font-weight="700" text-anchor="middle">5 阶段推理状态机</text>
+  <text x="540" y="240" fill="#8888a0" font-size="20" text-anchor="middle">每阶段有质量门控，不过关就不能往下走</text>
+
+  <!-- Stage 1 -->
+  <rect x="100" y="310" width="880" height="140" rx="12" fill="#12131a" stroke="#1e1e2e" stroke-width="1"/>
+  <rect x="100" y="310" width="6" height="140" rx="3" fill="#f0c040"/>
+  <text x="140" y="355" fill="#f0c040" font-size="14" font-weight="700" letter-spacing="2" font-family="'SF Mono', monospace">STAGE 1</text>
+  <text x="260" y="355" fill="#e8e8f0" font-size="26" font-weight="700">锚定</text>
+  <text x="140" y="395" fill="#c0c0d0" font-size="18">把模糊的感觉变成具体可操作的问题</text>
+  <text x="140" y="428" fill="#555568" font-size="14">门控：清晰度 · 技术：费米分解</text>
+
+  <!-- Arrow 1→2 -->
+  <text x="540" y="478" fill="#2ec4b6" font-size="24" text-anchor="middle" opacity="0.5">▼</text>
+
+  <!-- Stage 2 -->
+  <rect x="100" y="498" width="880" height="140" rx="12" fill="#12131a" stroke="#1e1e2e" stroke-width="1"/>
+  <rect x="100" y="498" width="6" height="140" rx="3" fill="#60a5fa"/>
+  <text x="140" y="543" fill="#60a5fa" font-size="14" font-weight="700" letter-spacing="2" font-family="'SF Mono', monospace">STAGE 2</text>
+  <text x="260" y="543" fill="#e8e8f0" font-size="26" font-weight="700">证据检验</text>
+  <text x="140" y="583" fill="#c0c0d0" font-size="18">收集证据，然后强制你找反面证据</text>
+  <text x="140" y="616" fill="#555568" font-size="14">门控：准确度 + 广度 · 技术：反 WYSIATI</text>
+
+  <!-- Arrow 2→3 -->
+  <text x="540" y="666" fill="#2ec4b6" font-size="24" text-anchor="middle" opacity="0.5">▼</text>
+
+  <!-- Stage 3 — highlighted -->
+  <rect x="100" y="686" width="880" height="158" rx="12" fill="#12131a" stroke="#2ec4b6" stroke-width="1.5"/>
+  <rect x="100" y="686" width="6" height="158" rx="3" fill="#2ec4b6"/>
+  <text x="140" y="731" fill="#2ec4b6" font-size="14" font-weight="700" letter-spacing="2" font-family="'SF Mono', monospace">STAGE 3</text>
+  <text x="260" y="731" fill="#e8e8f0" font-size="26" font-weight="700">推理桥梁</text>
+  <rect x="420" y="714" width="60" height="24" rx="4" fill="#2ec4b6" opacity="0.15"/>
+  <text x="450" y="732" fill="#2ec4b6" font-size="12" font-weight="600" text-anchor="middle">核心</text>
+  <text x="140" y="773" fill="#c0c0d0" font-size="18">追问：凭什么你的证据能推出你的结论？</text>
+  <text x="140" y="808" fill="#8888a0" font-size="15" font-style="italic">大多数人直接从证据跳到结论，跳过了这一步</text>
+  <text x="140" y="831" fill="#555568" font-size="14">门控：逻辑性 · 技术：Warrant 提取</text>
+
+  <!-- Arrow 3→4 -->
+  <text x="540" y="876" fill="#2ec4b6" font-size="24" text-anchor="middle" opacity="0.5">▼</text>
+
+  <!-- Stage 4 -->
+  <rect x="100" y="896" width="880" height="140" rx="12" fill="#12131a" stroke="#1e1e2e" stroke-width="1"/>
+  <rect x="100" y="896" width="6" height="140" rx="3" fill="#f97316"/>
+  <text x="140" y="941" fill="#f97316" font-size="14" font-weight="700" letter-spacing="2" font-family="'SF Mono', monospace">STAGE 4</text>
+  <text x="260" y="941" fill="#e8e8f0" font-size="26" font-weight="700">压力测试</text>
+  <text x="140" y="981" fill="#c0c0d0" font-size="18">找到你的结论会崩的场景</text>
+  <text x="140" y="1014" fill="#555568" font-size="14">门控：公正性 + 深度 · 技术：事前验尸 + 置信度校准</text>
+
+  <!-- Arrow 4→5 -->
+  <text x="540" y="1064" fill="#2ec4b6" font-size="24" text-anchor="middle" opacity="0.5">▼</text>
+
+  <!-- Stage 5 -->
+  <rect x="100" y="1084" width="880" height="140" rx="12" fill="#12131a" stroke="#1e1e2e" stroke-width="1"/>
+  <rect x="100" y="1084" width="6" height="140" rx="3" fill="#a78bfa"/>
+  <text x="140" y="1129" fill="#a78bfa" font-size="14" font-weight="700" letter-spacing="2" font-family="'SF Mono', monospace">STAGE 5</text>
+  <text x="260" y="1129" fill="#e8e8f0" font-size="26" font-weight="700">总结</text>
+  <text x="140" y="1169" fill="#c0c0d0" font-size="18">输出完整 Toulmin 论证图 + 偏见报告</text>
+  <text x="140" y="1202" fill="#555568" font-size="14">数据 → 保证 → 主张 → 限定 → 反驳</text>
+
+  <!-- Bottom insight -->
+  <line x1="100" y1="1280" x2="980" y2="1280" stroke="#1e1e2e" stroke-width="1"/>
+
+  <text x="540" y="1340" fill="#8888a0" font-size="20" text-anchor="middle">
+    <tspan fill="#e8e8f0" font-weight="600">最终产出不是更好的答案，</tspan>
+    <tspan fill="#2ec4b6" font-weight="600">是更好的问题。</tspan>
+  </text>
+
+  <!-- Bottom bar -->
+  <rect x="0" y="1380" width="1080" height="60" fill="#0c0d12"/>
+  <text x="540" y="1416" fill="#555568" font-size="14" text-anchor="middle" letter-spacing="1">基于 Toulmin · Paul-Elder · Kahneman · Tetlock</text>
+</svg>
