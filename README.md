@@ -283,7 +283,7 @@ MIT
 > *"AI 正在让深度专业知识变得过时——还值得花几年精通一个领域吗？"*
 
 <div align="center">
-<img src="assets/demo-standalone.svg" alt="独立模式：5 阶段深度推理会话" width="700"/>
+<img src="assets/demo-standalone-zh.svg" alt="独立模式：5 阶段深度推理会话" width="700"/>
 
 <sub>完整 5 阶段：锚定 > 证据检验 > 推理桥梁 > 压力测试 > Toulmin 总结</sub>
 </div>
@@ -295,7 +295,7 @@ MIT
 > 你正在写一个实时 dashboard，遇到架构分岔：WebSocket、SSE 还是轮询？
 
 <div align="center">
-<img src="assets/demo-assist.svg" alt="辅助模式：vibe coding 中的快速结构化思考" width="700"/>
+<img src="assets/demo-assist-zh.svg" alt="辅助模式：vibe coding 中的快速结构化思考" width="700"/>
 
 <sub>2-3 轮对话，结构化决策保存到 .claude/，Claude Code 后续自动参考</sub>
 </div>

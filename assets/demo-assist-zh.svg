@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 920" font-family="'SF Mono', 'Menlo', 'Monaco', monospace" font-size="13">
+  <defs>
+    <linearGradient id="abg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d1117"/>
+      <stop offset="100%" style="stop-color:#161b22"/>
+    </linearGradient>
+    <linearGradient id="ateal" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#2ec4b6"/>
+      <stop offset="100%" style="stop-color:#3dd6c8"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="920" fill="url(#abg)" rx="12"/>
+
+  <!-- Terminal chrome -->
+  <rect x="0" y="0" width="800" height="36" fill="#21262d" rx="12"/>
+  <rect x="0" y="12" width="800" height="24" fill="#21262d"/>
+  <circle cx="20" cy="18" r="6" fill="#ff5f57"/>
+  <circle cx="40" cy="18" r="6" fill="#febc2e"/>
+  <circle cx="60" cy="18" r="6" fill="#28c840"/>
+  <text x="400" y="22" fill="#8b949e" text-anchor="middle" font-size="12">claude ~ 构建实时 dashboard</text>
+
+  <!-- Context: existing vibe coding conversation -->
+  <text x="30" y="65" fill="#484f58" font-size="11">... 正在构建实时 dashboard 组件 ...</text>
+
+  <!-- User message -->
+  <rect x="30" y="82" width="740" height="60" fill="#1c2128" rx="8" stroke="#30363d" stroke-width="1"/>
+  <text x="45" y="98" fill="#7ee787" font-size="11" font-weight="bold">你</text>
+  <text x="45" y="116" fill="#e6edf3" font-size="13">等等——这里该用 WebSocket、SSE 还是轮询？</text>
+  <text x="45" y="132" fill="#e6edf3" font-size="13">/think-through assist</text>
+
+  <!-- Assist mode badge -->
+  <rect x="30" y="158" width="140" height="22" fill="#2ec4b6" rx="4" opacity="0.15"/>
+  <text x="42" y="173" fill="#2ec4b6" font-size="11" font-weight="bold">辅助模式</text>
+  <text x="180" y="173" fill="#484f58" font-size="11">2-3 轮对话，然后回去干活</text>
+
+  <!-- Round 1: Anchor + Evidence -->
+  <rect x="30" y="192" width="740" height="130" fill="#1c2128" rx="8" stroke="#30363d" stroke-width="1"/>
+  <circle cx="55" cy="215" r="10" fill="#a78bfa" opacity="0.2"/>
+  <text x="55" y="219" fill="#a78bfa" font-size="11" text-anchor="middle">C</text>
+
+  <text x="75" y="219" fill="#e6edf3" font-size="13">先锚定一下。你的 dashboard 特征：</text>
+  <text x="75" y="239" fill="#c9d1d9" font-size="12">- 最多 50 个并发用户，数据每 5-30 秒更新一次</text>
+  <text x="75" y="259" fill="#c9d1d9" font-size="12">- 部署在 Vercel（无服务器——长连接很贵）</text>
+  <text x="75" y="285" fill="#e6edf3" font-size="13">实际需求是什么——低延迟还是低成本？</text>
+
+  <rect x="75" y="298" width="200" height="18" fill="#21262d" rx="3" stroke="#2ec4b6" stroke-width="1"/>
+  <text x="85" y="311" fill="#2ec4b6" font-size="10">A) 亚秒级实时性</text>
+  <rect x="285" y="298" width="200" height="18" fill="#21262d" rx="3" stroke="#30363d" stroke-width="1"/>
+  <text x="295" y="311" fill="#c9d1d9" font-size="10">B) 够用就行，控制成本</text>
+
+  <!-- Round 2: Bridge + Stress test -->
+  <rect x="30" y="336" width="740" height="148" fill="#1c2128" rx="8" stroke="#30363d" stroke-width="1"/>
+  <circle cx="55" cy="359" r="10" fill="#a78bfa" opacity="0.2"/>
+  <text x="55" y="363" fill="#a78bfa" font-size="11" text-anchor="middle">C</text>
+
+  <text x="75" y="363" fill="#e6edf3" font-size="13">"够用 + 低成本"在 Vercel 无服务器上。推理桥梁：</text>
+  <text x="75" y="389" fill="#c9d1d9" font-size="12">SSE 需要长连接。在 Vercel 上意味着 Edge Runtime +</text>
+  <text x="75" y="409" fill="#c9d1d9" font-size="12">流式传输——可行但增加基础设施复杂度。</text>
+  <text x="75" y="435" fill="#f47067" font-size="12" font-weight="bold">事前验尸：</text>
+  <text x="165" y="435" fill="#c9d1d9" font-size="12">如果你选了轮询，后面又需要亚秒级实时，</text>
+  <text x="75" y="455" fill="#c9d1d9" font-size="12">迁移痛不痛？（剧透：SWR 切换到 SSE 很干净。）</text>
+  <text x="75" y="475" fill="#8b949e" font-size="11" font-style="italic">"够用"在 3 个月内不会变成"太慢"的把握有多大？</text>
+
+  <!-- ════ Output card ════ -->
+  <rect x="30" y="500" width="740" height="310" fill="#1c2128" rx="8" stroke="#2ec4b6" stroke-width="1.5"/>
+
+  <text x="50" y="528" fill="#e6edf3" font-size="14" font-weight="bold">Think-Through：实时策略</text>
+  <line x1="50" y1="538" x2="750" y2="538" stroke="#30363d" stroke-width="1"/>
+
+  <text x="50" y="560" fill="#2ec4b6" font-size="12" font-weight="bold">主张：</text>
+  <text x="108" y="560" fill="#c9d1d9" font-size="12">Dashboard MVP 使用 SWR 轮询（10 秒间隔）。</text>
+
+  <text x="50" y="585" fill="#f0883e" font-size="12" font-weight="bold">证据：</text>
+  <text x="108" y="585" fill="#c9d1d9" font-size="12">50 用户，5-30 秒数据，Vercel 无服务器，成本敏感。</text>
+
+  <text x="50" y="610" fill="#a78bfa" font-size="12" font-weight="bold">保证：</text>
+  <text x="108" y="610" fill="#c9d1d9" font-size="12">当数据更新频率 > 网络往返时间时，轮询比维护</text>
+  <text x="108" y="627" fill="#c9d1d9" font-size="12">持久连接更简单、更便宜。</text>
+
+  <text x="50" y="652" fill="#f47067" font-size="12" font-weight="bold">风险：</text>
+  <text x="95" y="652" fill="#c9d1d9" font-size="12">如果实时需求收紧，SWR 转 SSE 迁移很干净</text>
+  <text x="95" y="669" fill="#c9d1d9" font-size="12">（换 fetcher 即可）。WebSocket 后期加入更难。</text>
+
+  <text x="50" y="694" fill="#7ee787" font-size="12" font-weight="bold">结论：</text>
+  <text x="108" y="694" fill="#e6edf3" font-size="12">SWR 轮询</text>
+  <text x="203" y="694" fill="#8b949e" font-size="12">（置信度：85%）</text>
+
+  <text x="50" y="719" fill="#8b949e" font-size="12" font-weight="bold">除非：</text>
+  <text x="108" y="719" fill="#c9d1d9" font-size="12">用户量增长 10 倍或延迟 SLA 降到 2 秒以下。</text>
+
+  <!-- Separator: output saved -->
+  <line x1="50" y1="740" x2="750" y2="740" stroke="#30363d" stroke-width="1"/>
+  <text x="50" y="762" fill="#2ec4b6" font-size="11" font-weight="bold">已保存到 .claude/think-through/realtime-strategy.md</text>
+  <text x="50" y="780" fill="#484f58" font-size="11">Claude Code 后续工作时会引用此决策。</text>
+  <text x="50" y="798" fill="#484f58" font-size="11">回顾命令：/think-through revisit realtime-strategy</text>
+
+  <!-- Back to normal coding -->
+  <rect x="30" y="828" width="740" height="50" fill="#0d1117" rx="8" stroke="#30363d" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="50" y="850" fill="#7ee787" font-size="12">回去干活。正在实现 SWR 轮询...</text>
+  <text x="50" y="868" fill="#484f58" font-size="11">useSWR('/api/dashboard', fetcher, { refreshInterval: 10000 })</text>
+
+  <!-- Cursor -->
+  <text x="30" y="905" fill="#7ee787" font-weight="bold">$</text>
+  <text x="50" y="905" fill="#484f58">
+    <animate attributeName="fill" values="#484f58;#e6edf3;#484f58" dur="1.2s" repeatCount="indefinite"/>|
+  </text>
+</svg>
