@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1440" font-family="system-ui, -apple-system, 'PingFang SC', 'Noto Sans SC', monospace" font-size="15">
+  <defs>
+    <filter id="blur1">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="60"/>
+    </filter>
+  </defs>
+
+  <rect width="1080" height="1440" fill="#f8f8fc"/>
+  <circle cx="540" cy="600" r="350" fill="#0d9488" opacity="0.03" filter="url(#blur1)"/>
+
+  <!-- Title -->
+  <text x="540" y="60" fill="#8888a0" font-size="18" text-anchor="middle" letter-spacing="3" font-weight="500" font-family="system-ui, 'PingFang SC', sans-serif">辅助模式演示</text>
+
+  <!-- Context -->
+  <text x="50" y="110" fill="#8888a0" font-size="14">... 正在构建实时 dashboard 组件 ...</text>
+
+  <!-- User message -->
+  <rect x="50" y="130" width="980" height="80" fill="#ffffff" rx="10" stroke="#d8d8e0" stroke-width="1"/>
+  <text x="75" y="155" fill="#0d9488" font-size="14" font-weight="bold">你</text>
+  <text x="75" y="180" fill="#1a1a2e" font-size="17">等等——这里该用 WebSocket、SSE 还是轮询？</text>
+  <text x="75" y="202" fill="#0d9488" font-size="15" font-weight="600">/think-through assist</text>
+
+  <!-- Assist badge -->
+  <rect x="50" y="228" width="160" height="28" fill="#0d9488" rx="6" opacity="0.1"/>
+  <text x="66" y="247" fill="#0d9488" font-size="14" font-weight="bold">辅助模式</text>
+  <text x="220" y="247" fill="#8888a0" font-size="14">2-3 轮对话，然后回去干活</text>
+
+  <!-- Round 1 -->
+  <rect x="50" y="273" width="980" height="200" fill="#ffffff" rx="10" stroke="#e4e4ec" stroke-width="1"/>
+  <circle cx="82" cy="303" r="13" fill="#8b5cf6" opacity="0.15"/>
+  <text x="82" y="307" fill="#8b5cf6" font-size="13" text-anchor="middle" font-weight="600">C</text>
+
+  <text x="110" y="307" fill="#1a1a2e" font-size="17">先锚定一下。你的 dashboard 特征：</text>
+  <text x="110" y="337" fill="#444455" font-size="15">- 最多 50 个并发用户，数据每 5-30 秒更新一次</text>
+  <text x="110" y="363" fill="#444455" font-size="15">- 部署在 Vercel（无服务器——长连接很贵）</text>
+  <text x="110" y="397" fill="#1a1a2e" font-size="17">实际需求是什么——低延迟还是低成本？</text>
+
+  <rect x="110" y="418" width="260" height="32" fill="#f0fffe" rx="6" stroke="#0d9488" stroke-width="1"/>
+  <text x="128" y="440" fill="#0d9488" font-size="14">A) 亚秒级实时性</text>
+  <rect x="385" y="418" width="280" height="32" fill="#f0f0f4" rx="6" stroke="#d8d8e0" stroke-width="1"/>
+  <text x="403" y="440" fill="#444455" font-size="14">B) 够用就行，控制成本</text>
+
+  <!-- Round 2 -->
+  <rect x="50" y="495" width="980" height="225" fill="#ffffff" rx="10" stroke="#e4e4ec" stroke-width="1"/>
+  <circle cx="82" cy="525" r="13" fill="#8b5cf6" opacity="0.15"/>
+  <text x="82" y="529" fill="#8b5cf6" font-size="13" text-anchor="middle" font-weight="600">C</text>
+
+  <text x="110" y="529" fill="#1a1a2e" font-size="17">"够用 + 低成本"在 Vercel 无服务器上。推理桥梁：</text>
+  <text x="110" y="559" fill="#444455" font-size="15">SSE 需要长连接。在 Vercel 上意味着 Edge Runtime +</text>
+  <text x="110" y="583" fill="#444455" font-size="15">流式传输——可行但增加基础设施复杂度。</text>
+
+  <text x="110" y="617" fill="#ef4444" font-size="15" font-weight="bold">事前验尸：</text>
+  <text x="215" y="617" fill="#444455" font-size="15">如果你选了轮询，后面又需要亚秒级实时，</text>
+  <text x="110" y="643" fill="#444455" font-size="15">迁移痛不痛？（剧透：SWR 切换到 SSE 很干净。）</text>
+
+  <text x="110" y="680" fill="#8888a0" font-size="14" font-style="italic">"够用"在 3 个月内不会变成"太慢"的把握有多大？</text>
+  <text x="110" y="706" fill="#8888a0" font-size="14" font-style="italic">"结果论"陷阱：策略正确不代表结果一定好。</text>
+
+  <!-- ════ Output card ════ -->
+  <rect x="50" y="740" width="980" height="440" fill="#ffffff" rx="12" stroke="#0d9488" stroke-width="2"/>
+
+  <text x="80" y="778" fill="#1a1a2e" font-size="19" font-weight="bold" font-family="system-ui, 'PingFang SC', sans-serif">Think-Through：实时策略</text>
+  <line x1="80" y1="794" x2="1000" y2="794" stroke="#e4e4ec" stroke-width="1"/>
+
+  <text x="80" y="825" fill="#0d9488" font-size="16" font-weight="bold">主张</text>
+  <text x="80" y="850" fill="#444455" font-size="15">Dashboard MVP 使用 SWR 轮询（10 秒间隔）。</text>
+
+  <text x="80" y="885" fill="#f97316" font-size="16" font-weight="bold">证据</text>
+  <text x="80" y="910" fill="#444455" font-size="15">50 用户，5-30 秒数据，Vercel 无服务器，成本敏感。</text>
+
+  <text x="80" y="945" fill="#8b5cf6" font-size="16" font-weight="bold">保证</text>
+  <text x="80" y="970" fill="#444455" font-size="15">当数据更新频率 > 网络往返时间时，轮询比维护持久连接更简单、更便宜。</text>
+
+  <text x="80" y="1005" fill="#ef4444" font-size="16" font-weight="bold">风险</text>
+  <text x="80" y="1030" fill="#444455" font-size="15">如果实时需求收紧，SWR 转 SSE 迁移很干净（换 fetcher 即可）。</text>
+
+  <text x="80" y="1065" fill="#16a34a" font-size="16" font-weight="bold">结论</text>
+  <text x="80" y="1090" fill="#1a1a2e" font-size="16" font-weight="600">SWR 轮询</text>
+  <text x="200" y="1090" fill="#8888a0" font-size="15">（置信度：85%）</text>
+
+  <text x="80" y="1125" fill="#8888a0" font-size="15" font-weight="600">除非：</text>
+  <text x="145" y="1125" fill="#444455" font-size="15">用户量增长 10 倍或延迟 SLA 降到 2 秒以下。</text>
+
+  <line x1="80" y1="1148" x2="1000" y2="1148" stroke="#e4e4ec" stroke-width="1"/>
+  <text x="80" y="1172" fill="#0d9488" font-size="14" font-weight="bold">已保存到 .claude/think-through/realtime-strategy.md</text>
+
+  <!-- Back to coding -->
+  <rect x="50" y="1200" width="980" height="70" fill="#f0f0f4" rx="10" stroke="#d8d8e0" stroke-width="1" stroke-dasharray="5,4"/>
+  <text x="80" y="1230" fill="#0d9488" font-size="16" font-weight="600">回去干活。正在实现 SWR 轮询...</text>
+  <text x="80" y="1256" fill="#8888a0" font-size="14" font-family="'SF Mono', monospace">useSWR('/api/dashboard', fetcher, { refreshInterval: 10000 })</text>
+
+  <!-- Bottom context -->
+  <rect x="50" y="1290" width="980" height="55" fill="#ffffff" rx="10" stroke="#e4e4ec" stroke-width="1"/>
+  <text x="80" y="1315" fill="#8888a0" font-size="14">Claude Code 后续工作时会引用此决策。</text>
+  <text x="80" y="1337" fill="#8888a0" font-size="14">回顾命令：<tspan fill="#0d9488" font-weight="600">/think-through revisit realtime-strategy</tspan></text>
+
+  <!-- Bottom bar -->
+  <rect x="0" y="1400" width="1080" height="40" fill="#f0f0f4"/>
+  <text x="540" y="1426" fill="#8888a0" font-size="14" text-anchor="middle" font-family="system-ui, 'PingFang SC', sans-serif">辅助模式 · 2 轮对话 · 输出决策文档 · 自动回归编码</text>
+</svg>

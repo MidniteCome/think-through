@@ -1,100 +1,226 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1440" font-family="system-ui, -apple-system, 'PingFang SC', 'Noto Sans SC', sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920" font-family="system-ui, -apple-system, 'PingFang SC', 'Noto Sans SC', sans-serif">
   <defs>
-    <linearGradient id="bg" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:#08090d"/>
-      <stop offset="50%" style="stop-color:#0e1018"/>
-      <stop offset="100%" style="stop-color:#0a0b10"/>
-    </linearGradient>
-    <linearGradient id="teal" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#2ec4b6"/>
-      <stop offset="100%" style="stop-color:#3dd6c8"/>
-    </linearGradient>
     <filter id="blur1">
       <feGaussianBlur in="SourceGraphic" stdDeviation="80"/>
     </filter>
+    <linearGradient id="wgrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2ec4b6" stop-opacity="0.2"/>
+      <stop offset="100%" style="stop-color:#a78bfa" stop-opacity="0.2"/>
+    </linearGradient>
   </defs>
 
-  <rect width="1080" height="1440" fill="url(#bg)"/>
-
-  <!-- Ambient glows -->
-  <circle cx="300" cy="500" r="300" fill="#2ec4b6" opacity="0.03" filter="url(#blur1)"/>
-  <circle cx="780" cy="1000" r="250" fill="#2ec4b6" opacity="0.025" filter="url(#blur1)"/>
+  <rect width="1080" height="1920" fill="#f8f8fc"/>
+  <circle cx="300" cy="400" r="300" fill="#0d9488" opacity="0.04" filter="url(#blur1)"/>
 
   <!-- Title -->
-  <text x="540" y="180" fill="#e8e8f0" font-size="44" font-weight="700" text-anchor="middle">开源免费，3 步装好</text>
-  <text x="540" y="230" fill="#8888a0" font-size="20" text-anchor="middle">Claude Code skill · MIT License</text>
+  <text x="540" y="100" fill="#1a1a2e" font-size="48" font-weight="700" text-anchor="middle">开源免费，3 步装好</text>
+  <text x="540" y="145" fill="#777790" font-size="22" text-anchor="middle">Claude Code Skill · MIT License</text>
 
   <!-- Terminal window -->
-  <rect x="80" y="310" width="920" height="320" rx="12" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
+  <rect x="80" y="200" width="920" height="400" rx="12" fill="#1a1b26" stroke="#30363d" stroke-width="1"/>
 
   <!-- Terminal chrome -->
-  <rect x="80" y="310" width="920" height="40" rx="12" fill="#21262d"/>
-  <rect x="80" y="338" width="920" height="12" fill="#21262d"/>
-  <circle cx="108" cy="330" r="6" fill="#ff5f57"/>
-  <circle cx="130" cy="330" r="6" fill="#febc2e"/>
-  <circle cx="152" cy="330" r="6" fill="#28c840"/>
-  <text x="540" y="334" fill="#8b949e" text-anchor="middle" font-size="13" font-family="'SF Mono', monospace">Terminal</text>
+  <rect x="80" y="200" width="920" height="40" rx="12" fill="#21262d"/>
+  <rect x="80" y="228" width="920" height="12" fill="#21262d"/>
+  <circle cx="108" cy="220" r="6" fill="#ff5f57"/>
+  <circle cx="130" cy="220" r="6" fill="#febc2e"/>
+  <circle cx="152" cy="220" r="6" fill="#28c840"/>
+  <text x="540" y="224" fill="#8b949e" text-anchor="middle" font-size="14" font-family="'SF Mono', monospace">Terminal</text>
 
-  <!-- Command 1 -->
-  <text x="110" y="390" fill="#8b949e" font-size="13" font-family="'SF Mono', monospace"># 克隆仓库</text>
-  <text x="110" y="418" fill="#7ee787" font-size="16" font-family="'SF Mono', monospace" font-weight="bold">$</text>
-  <text x="135" y="418" fill="#e6edf3" font-size="16" font-family="'SF Mono', monospace">git clone https://github.com/MidniteCome/think-through.git</text>
+  <!-- Step 1 -->
+  <text x="110" y="280" fill="#8b949e" font-size="15" font-family="'SF Mono', monospace"># 1. 克隆仓库</text>
+  <text x="110" y="310" fill="#7ee787" font-size="18" font-family="'SF Mono', monospace" font-weight="bold">$</text>
+  <text x="135" y="310" fill="#e6edf3" font-size="18" font-family="'SF Mono', monospace">git clone https://github.com/MidniteCome/think-through</text>
 
-  <!-- Command 2 -->
-  <text x="110" y="462" fill="#8b949e" font-size="13" font-family="'SF Mono', monospace"># 复制到 Claude Code skills 目录</text>
-  <text x="110" y="490" fill="#7ee787" font-size="16" font-family="'SF Mono', monospace" font-weight="bold">$</text>
-  <text x="135" y="490" fill="#e6edf3" font-size="16" font-family="'SF Mono', monospace">mkdir -p ~/.claude/skills/think-through</text>
-  <text x="110" y="518" fill="#7ee787" font-size="16" font-family="'SF Mono', monospace" font-weight="bold">$</text>
-  <text x="135" y="518" fill="#e6edf3" font-size="16" font-family="'SF Mono', monospace">cp -r think-through/SKILL.md ~/.claude/skills/think-through/</text>
+  <!-- Step 2 -->
+  <text x="110" y="355" fill="#8b949e" font-size="15" font-family="'SF Mono', monospace"># 2. 复制到 Claude Code skills 目录</text>
+  <text x="110" y="385" fill="#7ee787" font-size="18" font-family="'SF Mono', monospace" font-weight="bold">$</text>
+  <text x="135" y="385" fill="#e6edf3" font-size="18" font-family="'SF Mono', monospace">mkdir -p ~/.claude/skills/think-through</text>
+  <text x="110" y="415" fill="#7ee787" font-size="18" font-family="'SF Mono', monospace" font-weight="bold">$</text>
+  <text x="135" y="415" fill="#e6edf3" font-size="18" font-family="'SF Mono', monospace">cp think-through/SKILL.md ~/.claude/skills/think-through/</text>
 
-  <!-- Command 3 -->
-  <text x="110" y="562" fill="#8b949e" font-size="13" font-family="'SF Mono', monospace"># 重启 Claude Code，输入：</text>
-  <text x="110" y="590" fill="#7ee787" font-size="16" font-family="'SF Mono', monospace" font-weight="bold">$</text>
-  <text x="135" y="590" fill="#f0c040" font-size="16" font-family="'SF Mono', monospace" font-weight="bold">/think-through</text>
-  <text x="335" y="590" fill="#e6edf3" font-size="16" font-family="'SF Mono', monospace">你的问题写在这里</text>
+  <!-- Step 3 — both commands -->
+  <text x="110" y="460" fill="#8b949e" font-size="15" font-family="'SF Mono', monospace"># 3. 重启 Claude Code，输入：</text>
+  <text x="110" y="490" fill="#7ee787" font-size="18" font-family="'SF Mono', monospace" font-weight="bold">$</text>
+  <text x="135" y="490" fill="#ffa657" font-size="18" font-family="'SF Mono', monospace" font-weight="bold">/think-through</text>
+  <text x="340" y="490" fill="#e6edf3" font-size="18" font-family="'SF Mono', monospace">你的问题</text>
+  <text x="560" y="490" fill="#484f58" font-size="15" font-family="'SF Mono', monospace"># 独立模式</text>
+
+  <text x="110" y="525" fill="#7ee787" font-size="18" font-family="'SF Mono', monospace" font-weight="bold">$</text>
+  <text x="135" y="525" fill="#ffa657" font-size="18" font-family="'SF Mono', monospace" font-weight="bold">/think-through assist</text>
+  <text x="420" y="525" fill="#e6edf3" font-size="18" font-family="'SF Mono', monospace">你的问题</text>
+  <text x="640" y="525" fill="#484f58" font-size="15" font-family="'SF Mono', monospace"># 辅助模式</text>
+
+  <!-- Blinking cursor -->
+  <text x="110" y="565" fill="#7ee787" font-size="18" font-family="'SF Mono', monospace" font-weight="bold">$</text>
+  <text x="135" y="565" fill="#484f58" font-family="'SF Mono', monospace">
+    <animate attributeName="fill" values="#484f58;#e6edf3;#484f58" dur="1.2s" repeatCount="indefinite"/>|
+  </text>
 
   <!-- Divider -->
-  <line x1="100" y1="710" x2="980" y2="710" stroke="#1e1e2e" stroke-width="1"/>
+  <line x1="100" y1="660" x2="980" y2="660" stroke="#e4e4ec" stroke-width="1"/>
 
   <!-- Two modes recap -->
-  <text x="540" y="780" fill="#555568" font-size="18" text-anchor="middle" letter-spacing="3" font-weight="500">两种模式</text>
+  <text x="540" y="720" fill="#8888a0" font-size="22" text-anchor="middle" letter-spacing="3" font-weight="500">两种模式</text>
 
   <!-- Mode 1 card -->
-  <rect x="80" y="820" width="440" height="200" rx="12" fill="#12131a" stroke="#1e1e2e" stroke-width="1"/>
-  <text x="120" y="870" fill="#2ec4b6" font-size="16" font-weight="700" letter-spacing="1">独立模式</text>
-  <text x="120" y="910" fill="#e8e8f0" font-size="20" font-weight="600">深度推理会话</text>
-  <text x="120" y="950" fill="#8888a0" font-size="15">完整 5 阶段</text>
-  <text x="120" y="975" fill="#8888a0" font-size="15">人生决策、创业方向、复杂问题</text>
-  <rect x="120" y="990" width="380" height="1" fill="#1e1e2e"/>
-
-  <!-- Mode 1 command -->
-  <text x="120" y="1005" fill="#555568" font-size="12" font-family="'SF Mono', monospace">/think-through 你的问题</text>
+  <rect x="80" y="755" width="440" height="200" rx="14" fill="#ffffff" stroke="#e4e4ec" stroke-width="1.5"/>
+  <text x="120" y="800" fill="#0d9488" font-size="20" font-weight="700">独立模式</text>
+  <text x="120" y="835" fill="#1a1a2e" font-size="22" font-weight="600">深度推理会话</text>
+  <text x="120" y="870" fill="#777790" font-size="17">完整 5 阶段</text>
+  <text x="120" y="895" fill="#777790" font-size="17">人生决策、创业方向、复杂问题</text>
+  <rect x="120" y="915" width="380" height="1" fill="#e4e4ec"/>
+  <text x="120" y="940" fill="#8888a0" font-size="14" font-family="'SF Mono', monospace">/think-through 你的问题</text>
 
   <!-- Mode 2 card -->
-  <rect x="560" y="820" width="440" height="200" rx="12" fill="#12131a" stroke="#2ec4b6" stroke-width="1" opacity="1"/>
-  <text x="600" y="870" fill="#f0c040" font-size="16" font-weight="700" letter-spacing="1">辅助模式</text>
-  <text x="600" y="910" fill="#e8e8f0" font-size="20" font-weight="600">Vibe Coding 伴侣</text>
-  <text x="600" y="950" fill="#8888a0" font-size="15">2-3 轮快速决策</text>
-  <text x="600" y="975" fill="#8888a0" font-size="15">架构选型、技术决策、方案对比</text>
-  <rect x="600" y="990" width="380" height="1" fill="#1e1e2e"/>
+  <rect x="560" y="755" width="440" height="200" rx="14" fill="#f0fffe" stroke="#0d9488" stroke-width="1.5"/>
+  <text x="600" y="800" fill="#c49000" font-size="20" font-weight="700">辅助模式</text>
+  <text x="600" y="835" fill="#1a1a2e" font-size="22" font-weight="600">Vibe Coding 伴侣</text>
+  <text x="600" y="870" fill="#777790" font-size="17">2-3 轮快速决策</text>
+  <text x="600" y="895" fill="#777790" font-size="17">架构选型、技术决策、方案对比</text>
+  <rect x="600" y="915" width="380" height="1" fill="#c8e8e5"/>
+  <text x="600" y="940" fill="#8888a0" font-size="14" font-family="'SF Mono', monospace">/think-through assist 你的问题</text>
 
-  <!-- Mode 2 command -->
-  <text x="600" y="1005" fill="#555568" font-size="12" font-family="'SF Mono', monospace">/think-through assist 你的问题</text>
+  <!-- ════ Lucidly Section ════ -->
+  <line x1="100" y1="1010" x2="980" y2="1010" stroke="#e4e4ec" stroke-width="1"/>
+  <text x="540" y="1065" fill="#8888a0" font-size="22" text-anchor="middle" letter-spacing="3" font-weight="500">想要可视化 + 思维画像？</text>
+  <text x="540" y="1100" fill="#1a1a2e" font-size="32" font-weight="700" text-anchor="middle">Lucidly 洞悟 网页版</text>
 
-  <!-- Divider -->
-  <line x1="100" y1="1090" x2="980" y2="1090" stroke="#1e1e2e" stroke-width="1"/>
+  <!-- ═══ Screenshot 1: Toulmin Argument Structure ═══ -->
+  <rect x="80" y="1135" width="920" height="340" fill="#faf8f5" rx="12" stroke="#e8e0d8" stroke-width="1.5"/>
 
-  <!-- Lucidly CTA -->
-  <text x="540" y="1160" fill="#555568" font-size="18" text-anchor="middle" letter-spacing="3" font-weight="500">想要可视化 + 思维画像？</text>
+  <!-- Lucidly header -->
+  <text x="110" y="1165" fill="#0d9488" font-size="16" font-weight="bold" font-family="Georgia, serif" font-style="italic">Lucidly</text>
+  <text x="540" y="1163" fill="#8888a0" font-size="12" text-anchor="middle" letter-spacing="2">ARGUMENT STRUCTURE</text>
 
-  <rect x="280" y="1190" width="520" height="60" rx="30" fill="url(#teal)" opacity="0.12"/>
-  <rect x="280" y="1190" width="520" height="60" rx="30" fill="none" stroke="#2ec4b6" stroke-width="1.5"/>
-  <text x="540" y="1228" fill="#2ec4b6" font-size="22" font-weight="600" text-anchor="middle">试试 Lucidly 洞悟 网页版 →</text>
+  <!-- DATA card -->
+  <rect x="110" y="1185" width="250" height="145" fill="#ffffff" rx="10" stroke="#e8e0d8" stroke-width="1"/>
+  <rect x="110" y="1185" width="250" height="28" fill="#f97316" rx="10" opacity="0.08"/>
+  <rect x="110" y="1203" width="250" height="10" fill="#ffffff"/>
+  <text x="128" y="1204" fill="#f97316" font-size="12" font-weight="bold" letter-spacing="1" font-family="'SF Mono', monospace">DATA (3)</text>
+  <text x="128" y="1232" fill="#444455" font-size="13">APAC ECM experience</text>
+  <text x="128" y="1250" fill="#444455" font-size="13">doesn't match UK market</text>
+  <text x="128" y="1268" fill="#0d9488" font-size="11">● ● ●</text>
+  <line x1="128" y1="1280" x2="340" y2="1280" stroke="#e8e0d8" stroke-width="0.5"/>
+  <text x="128" y="1300" fill="#444455" font-size="13">Only 1 perfect-fit role</text>
+  <text x="128" y="1318" fill="#444455" font-size="13">in the past year</text>
 
-  <text x="540" y="1290" fill="#555568" font-size="15" text-anchor="middle">lucidly-tau.vercel.app</text>
+  <!-- Arrow Data→Warrant -->
+  <line x1="360" y1="1258" x2="405" y2="1258" stroke="#c9d1d9" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <polygon points="405,1254 415,1258 405,1262" fill="#c9d1d9"/>
+
+  <!-- WARRANT card -->
+  <rect x="415" y="1185" width="250" height="145" fill="#ffffff" rx="10" stroke="#e8e0d8" stroke-width="1"/>
+  <rect x="415" y="1185" width="250" height="28" fill="#1a1a2e" rx="10" opacity="0.06"/>
+  <rect x="415" y="1203" width="250" height="10" fill="#ffffff"/>
+  <text x="433" y="1204" fill="#1a1a2e" font-size="12" font-weight="bold" letter-spacing="1" font-family="'SF Mono', monospace">WARRANT (2)</text>
+  <text x="433" y="1232" fill="#444455" font-size="13">The real goal isn't just</text>
+  <text x="433" y="1250" fill="#444455" font-size="13">finding work — it's</text>
+  <text x="433" y="1268" fill="#444455" font-size="13">rebuilding identity</text>
+  <text x="433" y="1286" fill="#0d9488" font-size="11">● ● ●</text>
+  <line x1="433" y1="1298" x2="645" y2="1298" stroke="#e8e0d8" stroke-width="0.5"/>
+  <text x="433" y="1318" fill="#444455" font-size="13">M&amp;A gap is core blocker</text>
+
+  <!-- Arrow Warrant→Claim -->
+  <line x1="665" y1="1258" x2="710" y2="1258" stroke="#c9d1d9" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <polygon points="710,1254 720,1258 710,1262" fill="#c9d1d9"/>
+
+  <!-- CLAIM card -->
+  <rect x="720" y="1195" width="250" height="110" fill="#ffffff" rx="10" stroke="#0d9488" stroke-width="2"/>
+  <rect x="720" y="1195" width="250" height="28" fill="#0d9488" rx="10" opacity="0.08"/>
+  <rect x="720" y="1213" width="250" height="10" fill="#ffffff"/>
+  <text x="738" y="1214" fill="#ef4444" font-size="12" font-weight="bold" letter-spacing="1" font-family="'SF Mono', monospace">CLAIM (1)</text>
+  <text x="738" y="1242" fill="#444455" font-size="13">Should continue job</text>
+  <text x="738" y="1260" fill="#444455" font-size="13">search with a more</text>
+  <text x="738" y="1278" fill="#444455" font-size="13">realistic, mixed strategy</text>
+  <text x="738" y="1296" fill="#0d9488" font-size="11">● ● ○</text>
+
+  <!-- Bottom tags -->
+  <rect x="110" y="1345" width="150" height="24" fill="#ffffff" rx="6" stroke="#0d9488" stroke-width="1"/>
+  <text x="130" y="1362" fill="#0d9488" font-size="11" font-weight="600">QUALIFIER (1)</text>
+  <rect x="275" y="1345" width="140" height="24" fill="#ffffff" rx="6" stroke="#22c55e" stroke-width="1"/>
+  <text x="295" y="1362" fill="#16a34a" font-size="11" font-weight="600">BACKING (2)</text>
+  <rect x="430" y="1345" width="150" height="24" fill="#ffffff" rx="6" stroke="#ef4444" stroke-width="1"/>
+  <text x="450" y="1362" fill="#ef4444" font-size="11" font-weight="600">REBUTTAL (2)</text>
+
+  <!-- Label -->
+  <text x="540" y="1400" fill="#8888a0" font-size="14" text-anchor="middle">Toulmin 论证结构可视化</text>
+
+  <!-- ═══ Screenshot 2: Thinking Profile + Bias Radar ═══ -->
+  <rect x="80" y="1425" width="920" height="340" fill="#faf8f5" rx="12" stroke="#e8e0d8" stroke-width="1.5"/>
+
+  <!-- Lucidly header -->
+  <text x="110" y="1455" fill="#0d9488" font-size="16" font-weight="bold" font-family="Georgia, serif" font-style="italic">Lucidly</text>
+  <text x="540" y="1453" fill="#8888a0" font-size="12" text-anchor="middle" letter-spacing="2">THINKING PROFILE</text>
+
+  <!-- Thinking Type Card -->
+  <rect x="110" y="1475" width="380" height="140" fill="#ffffff" rx="12" stroke="#e8e0d8" stroke-width="1"/>
+  <rect x="110" y="1475" width="380" height="140" fill="url(#wgrad)" rx="12" opacity="0.3"/>
+  <text x="300" y="1515" fill="#0d9488" font-size="42" font-weight="bold" text-anchor="middle" letter-spacing="8">ATBG</text>
+  <text x="300" y="1545" fill="#1a1a2e" font-size="18" text-anchor="middle" font-weight="bold" font-family="Georgia, serif" font-style="italic">The Specialist</text>
+  <text x="300" y="1575" fill="#777790" font-size="13" text-anchor="middle">Deep and disciplined in analysis</text>
+  <text x="300" y="1595" fill="#777790" font-size="13" text-anchor="middle">with a strong growth trajectory</text>
+
+  <!-- Quality Score -->
+  <rect x="110" y="1630" width="380" height="70" fill="#ffffff" rx="10" stroke="#e8e0d8" stroke-width="1"/>
+  <text x="130" y="1660" fill="#1a1a2e" font-size="15" font-weight="bold">Quality Score Trend</text>
+  <text x="440" y="1660" fill="#0d9488" font-size="15" font-weight="bold">↑ +58%</text>
+  <!-- Sparkline -->
+  <polyline points="130,1690 180,1693 230,1685 280,1680 330,1672 380,1668 430,1666 460,1664" fill="none" stroke="#0d9488" stroke-width="2.5" stroke-linecap="round"/>
+  <text x="300" y="1688" fill="#1a1a2e" font-size="24" font-weight="bold" text-anchor="middle">67</text>
+
+  <!-- Bias Radar Card -->
+  <rect x="520" y="1475" width="450" height="255" fill="#ffffff" rx="12" stroke="#e8e0d8" stroke-width="1"/>
+  <text x="545" y="1502" fill="#1a1a2e" font-size="15" font-weight="bold">Bias Radar</text>
+
+  <!-- Radar chart -->
+  <g transform="translate(745, 1620)">
+    <!-- Guide rings -->
+    <circle cx="0" cy="0" r="80" fill="none" stroke="#e8e0d8" stroke-width="0.5"/>
+    <circle cx="0" cy="0" r="60" fill="none" stroke="#e8e0d8" stroke-width="0.3"/>
+    <circle cx="0" cy="0" r="40" fill="none" stroke="#e8e0d8" stroke-width="0.3"/>
+    <circle cx="0" cy="0" r="20" fill="none" stroke="#e8e0d8" stroke-width="0.3"/>
+
+    <!-- Axis lines -->
+    <line x1="0" y1="-80" x2="0" y2="80" stroke="#e8e0d8" stroke-width="0.3"/>
+    <line x1="-69" y1="-40" x2="69" y2="40" stroke="#e8e0d8" stroke-width="0.3"/>
+    <line x1="-69" y1="40" x2="69" y2="-40" stroke="#e8e0d8" stroke-width="0.3"/>
+    <line x1="-80" y1="0" x2="80" y2="0" stroke="#e8e0d8" stroke-width="0.3"/>
+
+    <!-- Data polygon -->
+    <polygon points="0,-64 49,-27 55,27 18,46 -37,36 -53,9 -44,-31 -22,-49"
+             fill="#0d9488" fill-opacity="0.12" stroke="#0d9488" stroke-width="2"/>
+
+    <!-- Data points -->
+    <circle cx="0" cy="-64" r="4" fill="#0d9488"/>
+    <circle cx="49" cy="-27" r="4" fill="#0d9488"/>
+    <circle cx="55" cy="27" r="4" fill="#0d9488"/>
+    <circle cx="18" cy="46" r="4" fill="#0d9488"/>
+    <circle cx="-37" cy="36" r="4" fill="#0d9488"/>
+    <circle cx="-53" cy="9" r="4" fill="#0d9488"/>
+    <circle cx="-44" cy="-31" r="4" fill="#0d9488"/>
+    <circle cx="-22" cy="-49" r="4" fill="#0d9488"/>
+
+    <!-- Labels -->
+    <text x="0" y="-88" fill="#777790" font-size="11" text-anchor="middle">Confirmation</text>
+    <text x="72" y="-32" fill="#777790" font-size="11">Anchoring</text>
+    <text x="75" y="34" fill="#777790" font-size="11">Sunk Cost</text>
+    <text x="30" y="64" fill="#777790" font-size="11">Availability</text>
+    <text x="-42" y="55" fill="#777790" font-size="11" text-anchor="end">Bandwagon</text>
+    <text x="-72" y="14" fill="#777790" font-size="11" text-anchor="end">Framing</text>
+    <text x="-62" y="-36" fill="#777790" font-size="11" text-anchor="end">Survivorship</text>
+    <text x="-28" y="-60" fill="#777790" font-size="11" text-anchor="end">Overconf.</text>
+  </g>
+
+  <!-- Label -->
+  <text x="540" y="1750" fill="#8888a0" font-size="14" text-anchor="middle">思维画像 · 偏见雷达 · 成长轨迹</text>
+
+  <!-- CTA button -->
+  <rect x="260" y="1785" width="560" height="60" rx="30" fill="#0d9488" opacity="0.08"/>
+  <rect x="260" y="1785" width="560" height="60" rx="30" fill="none" stroke="#0d9488" stroke-width="1.5"/>
+  <text x="540" y="1823" fill="#0d9488" font-size="24" font-weight="600" text-anchor="middle">lucidly-tau.vercel.app →</text>
 
   <!-- Bottom bar -->
-  <rect x="0" y="1380" width="1080" height="60" fill="#0c0d12"/>
-  <circle cx="100" cy="1410" r="4" fill="#2ec4b6" opacity="0.6"/>
-  <text x="540" y="1416" fill="#555568" font-size="14" text-anchor="middle" letter-spacing="1" font-family="'SF Mono', monospace">github.com/MidniteCome/think-through</text>
+  <rect x="0" y="1870" width="1080" height="50" fill="#f0f0f4"/>
+  <text x="540" y="1900" fill="#8888a0" font-size="16" text-anchor="middle" letter-spacing="1" font-family="'SF Mono', monospace">github.com/MidniteCome/think-through</text>
 </svg>

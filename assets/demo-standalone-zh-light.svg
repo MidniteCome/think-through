@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1440" font-family="system-ui, -apple-system, 'PingFang SC', 'Noto Sans SC', monospace" font-size="15">
+  <defs>
+    <filter id="blur1">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="60"/>
+    </filter>
+  </defs>
+
+  <rect width="1080" height="1440" fill="#f8f8fc"/>
+  <circle cx="540" cy="700" r="400" fill="#0d9488" opacity="0.03" filter="url(#blur1)"/>
+
+  <!-- Title -->
+  <text x="540" y="60" fill="#8888a0" font-size="18" text-anchor="middle" letter-spacing="3" font-weight="500" font-family="system-ui, 'PingFang SC', sans-serif">独立模式演示</text>
+
+  <!-- User input -->
+  <text x="50" y="110" fill="#0d9488" font-weight="bold" font-size="16">$</text>
+  <text x="75" y="110" fill="#1a1a2e" font-size="16" font-weight="600">/think-through</text>
+
+  <rect x="50" y="130" width="980" height="55" fill="#ffffff" rx="10" stroke="#d8d8e0" stroke-width="1"/>
+  <text x="70" y="154" fill="#8888a0" font-size="13">话题：</text>
+  <text x="130" y="154" fill="#1a1a2e" font-size="15">AI 正在让深度专业知识变得过时——还值得花几年精通一个领域吗？</text>
+
+  <!-- Stage 1 -->
+  <rect x="50" y="205" width="980" height="30" fill="#f0f0f4" rx="6"/>
+  <rect x="50" y="205" width="200" height="30" fill="#0d9488" rx="6" opacity="0.1"/>
+  <text x="68" y="225" fill="#0d9488" font-size="14" font-weight="bold">[阶段 1/5：锚定]</text>
+  <rect x="400" y="217" width="120" height="6" fill="#e4e4ec" rx="3"/>
+  <rect x="400" y="217" width="24" height="6" fill="#0d9488" rx="3"/>
+
+  <rect x="50" y="250" width="980" height="190" fill="#ffffff" rx="10" stroke="#e4e4ec" stroke-width="1"/>
+  <circle cx="80" cy="278" r="12" fill="#8b5cf6" opacity="0.15"/>
+  <text x="80" y="282" fill="#8b5cf6" font-size="12" text-anchor="middle" font-weight="600">C</text>
+
+  <text x="105" y="282" fill="#1a1a2e" font-size="16">"深度专业知识已经过时"——这个命题太大了。先具体化。</text>
+  <text x="105" y="310" fill="#444455" font-size="14">你说的"精通一个领域"，具体是指哪种场景？</text>
+
+  <rect x="105" y="332" width="400" height="30" fill="#f0fffe" rx="6" stroke="#0d9488" stroke-width="1"/>
+  <text x="122" y="352" fill="#0d9488" font-size="13">A) 花 10 年成为世界级专家</text>
+
+  <rect x="105" y="370" width="400" height="30" fill="#f0f0f4" rx="6" stroke="#d8d8e0" stroke-width="1"/>
+  <text x="122" y="390" fill="#444455" font-size="13">B) 深耕 3 年，足以高效指挥 AI</text>
+
+  <rect x="105" y="408" width="400" height="30" fill="#f0f0f4" rx="6" stroke="#d8d8e0" stroke-width="1"/>
+  <text x="122" y="428" fill="#444455" font-size="13">C) 保持广度——每样都学一点</text>
+
+  <!-- Stage 2 -->
+  <rect x="50" y="458" width="980" height="30" fill="#f0f0f4" rx="6"/>
+  <rect x="50" y="458" width="400" height="30" fill="#f97316" rx="6" opacity="0.08"/>
+  <text x="68" y="478" fill="#f97316" font-size="14" font-weight="bold">[阶段 2/5：证据检验]</text>
+  <rect x="400" y="470" width="120" height="6" fill="#e4e4ec" rx="3"/>
+  <rect x="400" y="470" width="48" height="6" fill="#f97316" rx="3"/>
+
+  <rect x="50" y="503" width="980" height="165" fill="#ffffff" rx="10" stroke="#e4e4ec" stroke-width="1"/>
+  <circle cx="80" cy="531" r="12" fill="#8b5cf6" opacity="0.15"/>
+  <text x="80" y="535" fill="#8b5cf6" font-size="12" text-anchor="middle" font-weight="600">C</text>
+
+  <text x="105" y="535" fill="#1a1a2e" font-size="16">你选了 B。好——"深耕 3 年 + AI 杠杆"。现在来看证据。</text>
+  <text x="105" y="563" fill="#444455" font-size="14">你说"AI 已经能做到专家需要多年才能做到的事"。</text>
+  <text x="105" y="587" fill="#444455" font-size="14">能举一个具体的任务说明这一点吗？</text>
+
+  <rect x="105" y="607" width="860" height="28" fill="#fff7ed" rx="6" stroke="#f97316" stroke-width="1" opacity="0.8"/>
+  <text x="122" y="626" fill="#c2410c" font-size="13">偏见标记：可得性启发——炫酷的 AI 演示 =/= 通用能力</text>
+
+  <text x="105" y="656" fill="#8888a0" font-size="13" font-style="italic">必答：举出一个深度专业知识仍然胜过 AI 的领域。不能跳过。</text>
+
+  <!-- Stage 3 -->
+  <rect x="50" y="685" width="980" height="30" fill="#f0f0f4" rx="6"/>
+  <rect x="50" y="685" width="600" height="30" fill="#8b5cf6" rx="6" opacity="0.06"/>
+  <text x="68" y="705" fill="#8b5cf6" font-size="14" font-weight="bold">[阶段 3/5：推理桥梁]</text>
+  <rect x="400" y="697" width="120" height="6" fill="#e4e4ec" rx="3"/>
+  <rect x="400" y="697" width="72" height="6" fill="#8b5cf6" rx="3"/>
+
+  <rect x="50" y="730" width="980" height="140" fill="#ffffff" rx="10" stroke="#e4e4ec" stroke-width="1"/>
+  <circle cx="80" cy="758" r="12" fill="#8b5cf6" opacity="0.15"/>
+  <text x="80" y="762" fill="#8b5cf6" font-size="12" text-anchor="middle" font-weight="600">C</text>
+
+  <text x="105" y="762" fill="#1a1a2e" font-size="16">你的证据：AI 处理了 80% 的常规放射科读片。</text>
+  <text x="105" y="786" fill="#1a1a2e" font-size="16">你的结论：3 年深度 + AI 是最优策略。</text>
+  <text x="105" y="816" fill="#0d9488" font-size="16" font-weight="bold">但为什么"AI 处理了常规任务"就意味着"3 年是合适的深度"？</text>
+  <text x="105" y="846" fill="#0d9488" font-size="16" font-weight="bold">截断逻辑是什么？</text>
+  <text x="105" y="862" fill="#8888a0" font-size="13">试试："如果 AI 处理了某领域 X% 的工作，那么 Y 年就够了，因为______"</text>
+
+  <!-- Stage 4 -->
+  <rect x="50" y="888" width="980" height="30" fill="#f0f0f4" rx="6"/>
+  <rect x="50" y="888" width="800" height="30" fill="#ef4444" rx="6" opacity="0.06"/>
+  <text x="68" y="908" fill="#ef4444" font-size="14" font-weight="bold">[阶段 4/5：压力测试]</text>
+  <rect x="400" y="900" width="120" height="6" fill="#e4e4ec" rx="3"/>
+  <rect x="400" y="900" width="96" height="6" fill="#ef4444" rx="3"/>
+
+  <rect x="50" y="933" width="980" height="155" fill="#ffffff" rx="10" stroke="#e4e4ec" stroke-width="1"/>
+  <circle cx="80" cy="961" r="12" fill="#8b5cf6" opacity="0.15"/>
+  <text x="80" y="965" fill="#8b5cf6" font-size="12" text-anchor="middle" font-weight="600">C</text>
+
+  <text x="105" y="965" fill="#ef4444" font-size="16" font-weight="bold">事前验尸时间。</text>
+  <text x="105" y="993" fill="#1a1a2e" font-size="15">假设到了 2030 年，你按照"3 年 + AI"策略执行，结果失败了。</text>
+  <text x="105" y="1017" fill="#1a1a2e" font-size="15">哪里出了问题？给我三个最可能的失败原因。</text>
+
+  <text x="105" y="1050" fill="#1a1a2e" font-size="15">你的置信度：75%</text>
+  <rect x="105" y="1060" width="360" height="8" fill="#e4e4ec" rx="4"/>
+  <rect x="105" y="1060" width="270" height="8" fill="#0d9488" rx="4"/>
+  <text x="475" y="1070" fill="#8888a0" font-size="12">75%</text>
+
+  <!-- Stage 5 summary -->
+  <rect x="50" y="1105" width="980" height="30" fill="#f0f0f4" rx="6"/>
+  <rect x="50" y="1105" width="980" height="30" fill="#22c55e" rx="6" opacity="0.06"/>
+  <text x="68" y="1125" fill="#16a34a" font-size="14" font-weight="bold">[阶段 5/5：总结]</text>
+  <rect x="400" y="1117" width="120" height="6" fill="#22c55e" rx="3"/>
+
+  <rect x="50" y="1150" width="980" height="240" fill="#ffffff" rx="10" stroke="#d8d8e0" stroke-width="1.5"/>
+
+  <text x="75" y="1180" fill="#1a1a2e" font-size="17" font-weight="bold" font-family="system-ui, 'PingFang SC', sans-serif">Think-Through 总结</text>
+  <line x1="75" y1="1192" x2="1005" y2="1192" stroke="#e4e4ec" stroke-width="1"/>
+
+  <text x="75" y="1218" fill="#0d9488" font-size="14" font-weight="bold">主张</text>
+  <text x="75" y="1238" fill="#444455" font-size="14">3 年聚焦深度 + AI 流利度，胜过纯粹的通才和 10 年超级专业化</text>
+
+  <text x="75" y="1264" fill="#f97316" font-size="14" font-weight="bold">数据</text>
+  <text x="75" y="1284" fill="#444455" font-size="14">AI 处理了 80% 常规放射科读片；高年资仍需处理模糊病例</text>
+
+  <text x="75" y="1310" fill="#8b5cf6" font-size="14" font-weight="bold">保证</text>
+  <text x="75" y="1330" fill="#444455" font-size="14">AI 处理商品化层后，人的价值集中在判断层——约 3 年可达</text>
+
+  <text x="75" y="1356" fill="#ef4444" font-size="14" font-weight="bold">反驳</text>
+  <text x="75" y="1376" fill="#444455" font-size="14">若 AI 跳到判断层更快、资质门槛限制、或"3 年"因领域而异</text>
+
+  <!-- Bottom bar -->
+  <rect x="0" y="1400" width="1080" height="40" fill="#f0f0f4"/>
+  <text x="540" y="1426" fill="#8888a0" font-size="14" text-anchor="middle" font-family="'SF Mono', monospace">检测偏见：可得性启发 · 乐观偏误    置信度：75%</text>
+</svg>

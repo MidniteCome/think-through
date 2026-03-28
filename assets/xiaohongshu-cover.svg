@@ -1,74 +1,40 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1440" font-family="system-ui, -apple-system, 'PingFang SC', 'Noto Sans SC', sans-serif">
   <defs>
-    <linearGradient id="bg" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:#08090d"/>
-      <stop offset="50%" style="stop-color:#0e1018"/>
-      <stop offset="100%" style="stop-color:#0a0b10"/>
-    </linearGradient>
-    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#2ec4b6"/>
-      <stop offset="100%" style="stop-color:#1a8a7f"/>
-    </linearGradient>
     <filter id="blur1">
-      <feGaussianBlur in="SourceGraphic" stdDeviation="80"/>
-    </filter>
-    <filter id="blur2">
-      <feGaussianBlur in="SourceGraphic" stdDeviation="60"/>
+      <feGaussianBlur in="SourceGraphic" stdDeviation="100"/>
     </filter>
   </defs>
 
-  <!-- Background -->
-  <rect width="1080" height="1440" fill="url(#bg)"/>
+  <rect width="1080" height="1440" fill="#f8f8fc"/>
+  <circle cx="540" cy="550" r="400" fill="#2ec4b6" opacity="0.06" filter="url(#blur1)"/>
 
-  <!-- Ambient glow - top right -->
-  <circle cx="850" cy="300" r="300" fill="#2ec4b6" opacity="0.04" filter="url(#blur1)"/>
-  <!-- Ambient glow - bottom left -->
-  <circle cx="200" cy="1100" r="250" fill="#2ec4b6" opacity="0.03" filter="url(#blur2)"/>
+  <!-- Main punchline -->
+  <text x="540" y="340" fill="#1a1a2e" font-size="56" font-weight="800" text-anchor="middle">大多数人让 AI 替自己想</text>
+  <text x="540" y="425" fill="#1a1a2e" font-size="56" font-weight="800" text-anchor="middle">我做了个杠精 AI</text>
+  <text x="540" y="510" fill="#0d9488" font-size="56" font-weight="800" text-anchor="middle">逼我自己去想</text>
 
-  <!-- ═══ TOP: Hero statement ═══ -->
+  <!-- Divider -->
+  <line x1="420" y1="580" x2="660" y2="580" stroke="#d8d8e0" stroke-width="2"/>
 
-  <!-- Decorative quote mark -->
-  <text x="60" y="340" fill="#2ec4b6" opacity="0.1" font-size="360" font-family="Georgia, 'Noto Serif SC', serif" font-weight="700">"</text>
-
-  <!-- Main punchline — big and centered -->
-  <text x="540" y="480" fill="#e8e8f0" font-size="54" font-weight="700" text-anchor="middle" letter-spacing="2">
-    <tspan x="540" dy="0">大多数人让 AI 替自己想</tspan>
+  <!-- Quote -->
+  <text x="540" y="670" fill="#555568" font-size="28" text-anchor="middle" font-style="italic">
+    <tspan x="540" dy="0">"Figuring out what to ask</tspan>
+    <tspan x="540" dy="46">is more important than the answer."</tspan>
   </text>
 
-  <!-- Pause line -->
-  <line x1="440" y1="530" x2="640" y2="530" stroke="url(#accent)" stroke-width="2" opacity="0.4"/>
+  <!-- Attribution -->
+  <text x="540" y="800" fill="#777790" font-size="22" text-anchor="middle" font-weight="500">— Sam Altman</text>
+  <text x="540" y="838" fill="#9999aa" font-size="18" text-anchor="middle">CEO, OpenAI · 2025 YC Startup School</text>
 
-  <!-- Second line — the twist -->
-  <text x="540" y="610" fill="#2ec4b6" font-size="48" font-weight="700" text-anchor="middle" letter-spacing="2">
-    <tspan x="540" dy="0">我做了个杠精 AI</tspan>
-    <tspan x="540" dy="72">逼我自己去想</tspan>
-  </text>
+  <!-- WEF box -->
+  <rect x="200" y="920" width="680" height="120" rx="16" fill="#ffffff" stroke="#d8d8e0" stroke-width="1.5"/>
+  <text x="540" y="968" fill="#555568" font-size="20" text-anchor="middle" letter-spacing="2" font-weight="500">WORLD ECONOMIC FORUM · 2025</text>
+  <text x="540" y="1012" fill="#1a1a2e" font-size="28" font-weight="700" text-anchor="middle">批判性思维 = 全球 #1 紧缺技能</text>
 
-  <!-- ═══ MIDDLE: Divider ═══ -->
-  <line x1="100" y1="800" x2="980" y2="800" stroke="#1e1e2e" stroke-width="1"/>
-
-  <!-- ═══ BOTTOM: Quote + attribution ═══ -->
-
-  <text x="540" y="880" fill="#555568" font-size="18" text-anchor="middle" letter-spacing="3" font-weight="500">AI 时代的悖论</text>
-
-  <text x="540" y="960" fill="#c0c0d0" font-size="30" font-weight="500" text-anchor="middle">
-    <tspan x="540" dy="0">AI 越来越会答题，</tspan>
-    <tspan x="540" dy="48">但出题这件事，它做不了。</tspan>
-  </text>
-
-  <!-- Sam Altman quote block -->
-  <rect x="140" y="1080" width="800" height="180" rx="12" fill="#12131a" stroke="#1e1e2e" stroke-width="1"/>
-
-  <text x="180" y="1125" fill="#8888a0" font-size="22" font-style="italic">
-    <tspan x="180" dy="0">"搞清楚该问什么问题，</tspan>
-    <tspan x="190" dy="36">会比搞清楚答案本身更重要。"</tspan>
-  </text>
-
-  <line x1="180" y1="1200" x2="240" y2="1200" stroke="url(#accent)" stroke-width="1.5"/>
-  <text x="180" y="1230" fill="#555568" font-size="16" letter-spacing="0.5">Sam Altman, OpenAI CEO · CNBC, 2025</text>
+  <!-- Tagline -->
+  <text x="540" y="1160" fill="#8888a0" font-size="22" text-anchor="middle">开源 Claude Code Skill · 5 阶段推理状态机</text>
 
   <!-- Bottom bar -->
-  <rect x="0" y="1380" width="1080" height="60" fill="#0c0d12"/>
-  <circle cx="100" cy="1410" r="4" fill="#2ec4b6" opacity="0.6"/>
-  <text x="540" y="1418" fill="#555568" font-size="16" text-anchor="middle" letter-spacing="1.5" font-family="'SF Mono', 'Menlo', monospace">github.com/MidniteCome/think-through</text>
+  <rect x="0" y="1380" width="1080" height="60" fill="#f0f0f4"/>
+  <text x="540" y="1418" fill="#8888a0" font-size="17" text-anchor="middle" font-family="'SF Mono', monospace" letter-spacing="1">github.com/MidniteCome/think-through</text>
 </svg>
