@@ -30,7 +30,7 @@
   <!-- Step 1 -->
   <text x="110" y="280" fill="#8b949e" font-size="15" font-family="'SF Mono', monospace"># 1. 克隆仓库</text>
   <text x="110" y="310" fill="#7ee787" font-size="18" font-family="'SF Mono', monospace" font-weight="bold">$</text>
-  <text x="135" y="310" fill="#e6edf3" font-size="18" font-family="'SF Mono', monospace">git clone https://github.com/MidniteCome/think-through</text>
+  <text x="135" y="310" fill="#e6edf3" font-size="18" font-family="'SF Mono', monospace">git clone https://github.com/Willdeepdive/think-through</text>
 
   <!-- Step 2 -->
   <text x="110" y="355" fill="#8b949e" font-size="15" font-family="'SF Mono', monospace"># 2. 复制到 Claude Code skills 目录</text>
@@ -222,5 +222,5 @@
 
   <!-- Bottom bar -->
   <rect x="0" y="1870" width="1080" height="50" fill="#f0f0f4"/>
-  <text x="540" y="1900" fill="#8888a0" font-size="16" text-anchor="middle" letter-spacing="1" font-family="'SF Mono', monospace">github.com/MidniteCome/think-through</text>
+  <text x="540" y="1900" fill="#8888a0" font-size="16" text-anchor="middle" letter-spacing="1" font-family="'SF Mono', monospace">github.com/Willdeepdive/think-through</text>
 </svg>

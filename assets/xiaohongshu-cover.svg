@@ -36,5 +36,5 @@
 
   <!-- Bottom bar -->
   <rect x="0" y="1380" width="1080" height="60" fill="#f0f0f4"/>
-  <text x="540" y="1418" fill="#8888a0" font-size="17" text-anchor="middle" font-family="'SF Mono', monospace" letter-spacing="1">github.com/MidniteCome/think-through</text>
+  <text x="540" y="1418" fill="#8888a0" font-size="17" text-anchor="middle" font-family="'SF Mono', monospace" letter-spacing="1">github.com/Willdeepdive/think-through</text>
 </svg>

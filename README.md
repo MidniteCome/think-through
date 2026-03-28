@@ -74,7 +74,7 @@ That's what `/think-through` does.
 
 ```bash
 # Clone
-git clone https://github.com/MidniteCome/think-through.git
+git clone https://github.com/Willdeepdive/think-through.git
 
 # Copy to Claude Code skills
 mkdir -p ~/.claude/skills/think-through
@@ -219,7 +219,7 @@ MIT
 ---
 
 <div align="center">
-<sub>Built by <a href="https://github.com/MidniteCome">William Choi</a> as part of the <a href="https://lucidly-tau.vercel.app">Lucidly</a> project.</sub>
+<sub>Built by <a href="https://github.com/Willdeepdive">William Choi</a> as part of the <a href="https://lucidly-tau.vercel.app">Lucidly</a> project.</sub>
 </div>
 
 <br/>
@@ -306,7 +306,7 @@ MIT
 
 ```bash
 # 克隆仓库
-git clone https://github.com/MidniteCome/think-through.git
+git clone https://github.com/Willdeepdive/think-through.git
 
 # 复制到 Claude Code skills 目录
 mkdir -p ~/.claude/skills/think-through
@@ -451,5 +451,5 @@ MIT
 ---
 
 <div align="center">
-<sub>由 <a href="https://github.com/MidniteCome">William Choi</a> 构建，属于 <a href="https://lucidly-tau.vercel.app">Lucidly 洞悟</a> 项目。</sub>
+<sub>由 <a href="https://github.com/Willdeepdive">William Choi</a> 构建，属于 <a href="https://lucidly-tau.vercel.app">Lucidly 洞悟</a> 项目。</sub>
 </div>
